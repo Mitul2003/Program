@@ -9,6 +9,7 @@ int Floor(int arr[], int n, int ele)
 
     while (start <= end)
     {
+        //comment
         int mid = (end + start) / 2;
         if (arr[mid] == ele)
             return arr[mid];
