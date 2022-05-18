@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+
+AngularJs ng-mousemove Event with Example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+
+var app = angular.module('ngmousemoveApp', []);
+
+app.controller('ngmousemoveCtrl', function ($scope) {
+
+$scope.count = 0;
+
+$scope.getdetails = function () {
+
+$scope.count = $scope.count + 1;
+
+}
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div ng-app="ngmousemoveApp" ng-controller="ngmousemoveCtrl">
+
+<h2>AngularJS ng-mousemove Event Example</h2>
+
+<div style="padding:10px; border:1px solid black; width:30%; cursor:pointer; font-weight:bold" ng-mousemove="getdetails()">Move Mouse Cursor Here...</div><br /><br />
+
+<span style="color:Red">No. of Times MouseMove Event Fired: {{count}}</span>
+
+</div>
+
+</body>
+
+ 
+
+</html>

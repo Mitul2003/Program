@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .qustion {
+            font-size: 23px;
+            color: rgb(47, 0, 255);
+            background-color: rgb(228, 146, 173);
+        }
+
+        #p5 {
+            height: 200px;
+            width: 125px;   
+            position: relative;
+        }
+
+        #p7 {
+            height: 200px;
+            width: 125px;
+        }
+
+        #circle {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+        button {
+            border: 2px solid rgb(88, 65, 65);
+            font-size: 19px;
+            border-radius: 50px;
+            background-color: rgb(217, 255, 0);
+            cursor: pointer;
+
+        }
+        .shape {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(245, 117, 117);
+            position: relative;
+            animation-name: shape;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shape {
+            0% {
+                background-color: rgb(0, 225, 255);
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: rgb(0, 225, 255);
+                left: 200px;
+                top: 0px;
+            }
+            50% {
+                background-color: rgb(0, 225, 255);
+                left: 200px;
+                top: 200px;
+            }
+            75% {
+                background-color: rgb(0, 225, 255);
+                left: 0px;
+                top: 200px;
+            }
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        #bounceShape {
+            background-color: rgb(217, 255, 0);
+            height: 70px;
+            width: 70px;
+            border-radius: 70px;
+            position: relative;
+        }
+        
+        #borderBox {
+            
+            height: 210px;
+            width: 400px;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        .bold_23 {
+            font-weight: bold;
+        }
+
+       
+        
+        .main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(255, 0, 0);
+        }
+        
+        .loader {
+            width: 40px;
+            height: 40px;
+            color: #1424fa;
+            border: 4px solid;
+            border-radius: 50px;
+            border-top-color: transparent;
+            animation: loader 1s linear infinite;
+        }
+        
+        @keyframes loader {
+            25% {
+                color: #03d644;
+            }
+            50% {
+                color: #fbfe09;
+            }
+            75% {
+                color: #fc0303;
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        #box28 {
+            border: 2px solid rgb(255, 0, 0);
+            height: 210px;
+            width: 300px;
+            position: relative;
+            margin-left: 40px;
+        }
+        
+        #one1 {
+            height: 100px;
+            width: 100px;
+            border: 1px solid rgb(255, 0, 0);
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            background-color: rgb(21, 255, 0);
+        }
+       
+        
+        #box29 {
+            border: 2px solid rgb(255, 0, 0);
+            height: 300px;
+            width: 300px;
+            position: relative;
+            margin-left: 40px;
+        }
+        
+        #one2 {
+            height: 100px;
+            width: 100px;
+            border: 1px solid rgb(255, 0, 0);
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: rgb(34, 248, 15);
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+        }
+
+        #ovel {
+            background-color: rgb(10, 255, 43);
+            height: 200px;
+            width: 200px;
+            border-radius: 800px;
+            position: relative;
+        }
+        #div21{
+            width: 100px;
+            height: 100px;
+            border-radius: 200px;
+        }
+
+        /* 999 */
+        .highlight {
+            background-color: rgb(17, 0, 255);
+            color: white !important
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <!-- 1111 -->
+
+        <p class="qustion">Qustion :- 1</p>
+        <hr>
+        <label for="">Enter your Messages : </label>
+        <input type="text" placeholder="Enter you Messages" id="msg">
+        <p id="Fmsg"></p>
+        <button id="btn">Double Click</button>
+        <hr>
+
+        <!-- 2222 -->
+
+        <p class="qustion">Qustion :- 2</p>
+        <hr>
+        Input type : <input type="text" id="keybord">
+        <button id="p2"> Click</button>
+        <hr>
+
+        <!-- 3333 -->
+        <p class="qustion">Qustion :- 3</p>
+        <hr>
+        Hello guys !
+        <p>
+            <span class="blink"> We are from Sun_City_Of_Surat..</span>
+            
+        </p>
+        Clean city of india.
+        <hr>
+
+        <!-- 4444 -->
+        <p class="qustion">Qustion :- 4</p>
+        <hr>
+        <div id="fourth">
+            <h1>Mitul Dudhat</h1>
+            <h2>Mitul Dudhat</h2>
+            <h3>Mitul Dudhat</h3>
+            <h4 id="12">Mitul Dudhat</h4>
+            <h5>Mitul Dudhat</h5>
+            <h6>Mitul Dudhat</h6>
+            <button id="rmv">Remove</button>
+        </div>
+        <hr>
+
+        <!-- 5555 -->
+        <p class="qustion">Qustion :- 5</p>
+        <hr>
+        <img src="https://source.unsplash.com/user/erondu/200x200" alt="123" id="p5">
+        <hr>
+
+        <!-- 6666 -->
+        <p class="qustion">Qustion :- 6</p>
+        <hr>
+        <div>
+            <button id="cirbtn">Click</button>
+            <p id="circle"></p>
+        </div>
+        <hr>
+
+        <!-- 7777 -->
+        <p class="qustion">Qustion :- 7</p>
+        <hr>
+        <div class="fade">
+            <img src="https://source.unsplash.com/user/erondu/400x400" alt="123" id="p7">
+        </div>
+        <hr>
+
+        <!-- 8888 -->
+        <p class="qustion">Qustion :- 8</p>
+        <hr>
+        <div class="slide">
+            Toggle In Slide-Up & Slide-Down Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            necessitatibus officia nobis, ipsum aperiam aut placeat, inventore repellat tempora beatae quasi laboriosam
+            ratione molestias unde esse reiciendis atque molestiae suscipit expedita iure? Praesentium ex minus esse ab.
+            Perferendis, distinctio voluptatibus soluta illo tempore repellendus ut quae iusto, temporibus adipisci
+            quibusdam officia voluptatem! Porro modi deserunt consequuntur neque. Quidem possimus explicabo dignissimos
+            ea quos nobis fugiat nostrum laudantium quaerat est, sapiente delectus aspernatur dolores, voluptate ullam
+            architecto cupiditate reprehenderit officia consequuntur maxime velit sunt? Eos, alias. Repellendus quia
+            odio excepturi quo, totam vel facilis, corrupti nihil fugit molestias nesciunt odit id sit voluptatum nisi
+            unde veritatis dolorum! Provident maiores quibusdam temporibus autem sint tenetur pariatur corporis dolor
+            architecto. Modi, quam eveniet.
+        </div>
+        <button id="Hide">Slide-Up</button>
+        <button id="Show">Slide-Down</button>
+        <button id="Toggle">Toggle</button>
+        <hr>
+
+
+        <!-- 9999 -->
+
+        <p class="qustion">Qustion :- 9</p>
+        <hr>
+
+        <p class="pr9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in quas, accusamus dolorem
+            obcaecati
+            quisquam assumenda illum ipsam, fuga libero corrupti, mollitia consequuntur excepturi placeat!</p>
+        <p class="pr9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in quas, accusamus dolorem
+            obcaecati
+            quisquam assumenda illum ipsam, fuga libero corrupti, mollitia consequuntur excepturi placeat!</p>
+        <p class="pr9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in quas, accusamus dolorem
+            obcaecati
+            quisquam assumenda illum ipsam, fuga libero corrupti, mollitia consequuntur excepturi placeat!</p>
+        <p class="pr9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in quas, accusamus dolorem
+            obcaecati
+            quisquam assumenda illum ipsam, fuga libero corrupti, mollitia consequuntur excepturi placeat!</p>
+        <p class="pr9">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus in quas, accusamus dolorem
+            obcaecati
+            quisquam assumenda illum ipsam, fuga libero corrupti, mollitia consequuntur excepturi placeat!</p>
+
+        <hr>
+
+        <!-- 101010 -->
+
+        <p class="qustion">Qustion :- 10</p>
+        <hr>
+        <p class="pr10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quos dolore tempore facere nobis!
+            Porro
+            dolorem asperiores dolore, fugiat in ullam maiores vero consequatur voluptatem praesentium similique?
+            Incidunt, est vel nemo laudantium, rem dicta numquam illo dolorem, natus obcaecati blanditiis.</p>
+        <button id="p10">Click</button>
+        <hr>
+
+        <!-- 111111 -->
+
+        <p class="qustion">Question :- 11</p>
+        <hr>
+        Input Text :- <input type="text" id="p11">
+        <button id="btn11"> Click</button>
+        <hr>
+
+        <!-- 121212 -->
+
+        <p class="qustion">Question :- 12</p>
+        <hr>
+        <table id="table" border="2px solide black">
+            <thead>
+                <tr>
+
+                    <th>
+                        Instructor
+                    </th>
+                    <th>Number</th>
+                    <th>Class</th>
+                    <th>Div</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mitul</td>
+                    <td>2261</td>
+                    <td>JQuery</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>vaibhav</td>
+                    <td>2251</td>
+                    <td>CSS</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>pratixa</td>
+                    <td>2276</td>
+                    <td>C#</td>
+                    <td>B</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <button id="Row">Row Count</button>
+        <button id="column">Column Count</button>
+        <hr>
+
+        <!-- 131313 -->
+        <p class="qustion">Question :- 13</p>
+
+        <hr>
+        <input id="input2" type="text">
+
+
+        <!-- 141414 // 151515 -->
+        <hr>
+        <p class="qustion">Question :- 14 & 15</p>
+        <hr>
+        <ul id="ul1">
+            <li>C Language</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+
+        </ul><br>
+        <input type="text" placeholder="Add New Item" style="font-size:19px;" id="input14">
+        <button style="font-size:15px;" id="button14">Submit</button>
+    </div>
+    <hr>
+
+    <!-- 161616 -->
+    <p class="qustion">Question :- 16</p>
+    <hr>
+    <h3 style="margin-left: 20px; font-size: 25px; text-decoration: underline;">Color</h3>
+    <div id="colors">
+    </div>
+    <hr>
+
+
+    <!-- 171717 -->
+    <p class="qustion">Question :- 17</p>
+    <hr>
+    <ol start="5" id="blink_item" style="color:orange;">
+        <li>Ahmedabad</li>
+        <li>Surat</li>
+        <li>Amreli</li>
+        <li>Rajkot</li>
+    </ol>
+    <hr>
+
+
+    <!-- 181818 -->
+    <p class="qustion">Question :- 18</p>
+    <hr>
+    <div class="shape"></div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <hr>
+
+
+    <!-- 191919 -->
+    <p class="qustion">Question :- 19</p>
+    <hr>
+    <input type="text" placeholder="Add new item" style="font-size:19px" id="input19">
+    <button id="button19">ADD</button>
+    <br><br><br><br>
+    <div id="drpDown" style="margin-left: 70px;">
+        <select style="font-size:19px;">
+
+            <option>C</option>
+            <option>CPP</option>
+            <option>C#</option>
+            <option>JavaScript</option>
+            <option id="next">Python</option>
+
+        </select>
+
+    </div><br><br>
+    <hr>
+
+
+    <!-- 202020 -->
+    <p class="qustion">Question :- 20</p>
+    <hr>
+    <textarea maxlength="40"></textarea><br><br>
+    <span class="span">40</span> charecters are remaining
+    <hr>
+
+
+    <!-- 212121 -->
+    <p class="qustion">Question :- 21</p>
+    <hr>
+    <div style="border: 2px;">
+        <select style="font-size: 25px;margin-left:50px" id="color_cng">
+            <option value="pink">Pink</option>
+            <option>Orange</option>
+            <option>Blue</option>
+            <option>Tomato</option>
+        </select>
+    </div>
+    <div id="div21" style="margin-left:50px ;margin-top: 30px;"></div>
+    <hr>
+
+
+    <!-- 222222 -->
+    <p class="qustion">Question :- 22</p>
+    <hr>
+    <div id="scroll" style="overflow: scroll; width: 250px; height: 200px;">
+        “There is a lot of talking going on in the world right now. There is not a whole lot of listening. If we
+        switched it around – more listening and less talking – we would see miracles.” – Kay Lindahl <br><br>
+
+        In a social zeitgeist that emphasizes talking, verbalizing, and presenting one’s self, Kay Lindahl has
+        steadfastly worked to reverse this equation: since the early 1990s, she has been teaching people how to listen –
+        a composite form of inner and outer listening with a deeply spiritual grain.<br><br>
+
+        Kay’s mission began around 1991 when she founded The Alliance for Spiritual Community (ASC), a grassroots
+        interfaith organization creating dialogue among people of diverse faiths, cultures, and spiritual practices.
+        Having recently relocated to a new community with her husband, she started ASC from their living room to bring a
+        “strong spiritual presence” to her new community.
+    </div>
+    <hr>
+
+
+    <!-- 232323 -->
+    <p class="qustion">Question :- 23</p>
+    <hr>
+    <ol id="pr23_bold" style="font-size: 25px;">
+        <li>Rose</li>
+        <li>Lotus</li>
+        <li>Lily</li>
+        <li>Jasmine</li>
+    </ol>
+    <hr>
+
+
+    <!-- 242424 -->
+    <p class="qustion">Question :- 24</p>
+    <hr>
+    <div id="mouseMove">
+        <button id="button24" style="font-size:15px;margin-left:20px;">MouseMove</button>
+    </div><br><br>
+    <hr>
+
+
+    <!-- 252525 -->
+    <p class="qustion">Question :- 25</p>
+    <hr>
+    <br><br>
+    <div class="main">
+        <div class="loader">
+        </div>
+    </div>
+    <h2 style="margin-left: 70px;">JQuery Programs</h2><br><br><br>
+    <hr>
+
+
+    <!-- 262626 -->
+    <p class="qustion">Question :- 26</p>
+    <hr>
+    <div id="bounce">
+        <button id="button26" style="font-size:19px">BounceShape</button><br><br>
+        <div id="borderBox"><br><br><br><br>
+            <div id="bounceShape"></div>
+        </div>
+    </div><br><br><br>
+    <hr>
+
+
+
+
+
+    <!-- 282828 -->
+    <p class="qustion">Question :- 28</p>
+    <hr>
+    <input id="height28" type="text" placeholder="Enter height for shape">
+    <input id="width28" type="text" placeholder="Enter width for shape"><br><br>
+    <button style="font-size: medium; font-family: Times New Roman;" id="button28">Setout</button><br><br><br><br>
+    <div id="box28">
+        <div id="one1"></div>
+    </div><br><br><br>
+    <hr>
+
+
+    <!-- 292929 -->
+    <p class="qustion">Question :- 29</p>
+    <hr>
+    <input id="height29" type="text" placeholder="Enter height for shape">
+    <input id="width29" type="text" placeholder="Enter width for shape"><br><br>
+    <button id="button29" style="font-size: medium; font-family: Times New Roman;">SetInner</button><br><br><br>
+    <div id="box29">
+        <div id="one2">
+        </div>
+    </div><br><br><br>
+    <hr>
+
+
+    <!-- 303030 -->
+    <p class="qustion">Question :- 30</p>
+    <hr>
+    <div id="textarea30">
+        <input id="height30" type="text" placeholder="Enter the height of the shap">
+        <input id="width30" type="text" placeholder="Enter the width of the shap"><br><br><br>
+        <textarea style="margin-left: 70px;">
+        </textarea><span></span><br><br><br>
+        <button id="button30"
+            style="font-size: larger; font-family: Times New Roman; margin-left: 70px; width: 100px;">Set
+
+        </button>
+    </div><br><br>
+    <hr>
+
+
+
+    <!-- 313131 -->
+    <p class="qustion">Question :- 31</p>
+    <hr>
+    <button id="pr31_btn" style="font-size: 20px;">Animate height & width</button>
+    <div id="box" style="background: #1b0aff; margin-top: 5px; "></div>
+    <hr>
+
+
+    <!-- 323232 -->
+    <p class="qustion">Question :- 32</p>
+    <hr>
+    <hr>
+    <div id="ovel">
+    </div><br><br>
+    <button id="button32" style="font-size: large; font-family: Times New Roman; margin-left: 70px;">Click </button>
+    <hr>
+
+
+
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+
+        //1)
+        $("#btn").click(function () {
+            $("#Fmsg").html("Hello " + $("#msg").val());
+        })
+
+        //2)
+
+        $("#p2").click(function () {
+            alert($("#keybord").val());
+        })
+
+        
+
+        //4)
+        $("#rmv").click(function (event) {
+
+            $("#12").next().hide();
+        })
+
+        //5)
+        $("#p5").hover(function () {
+            $("#p5").animate({
+                left: "1145"
+            }, 2000);
+        })
+
+        //6)
+
+        $("#cirbtn").click(function () {
+            $("#circle").height(200);
+            $("#circle").width(200);
+            
+            // $("#circle").off();
+
+        })
+        
+
+        //7)
+
+        $("#p7").hover(function () {
+            $(this).fadeIn();
+        },
+            function () {
+                $(this).fadeOut(1000);
+            })
+
+        //8)
+
+        $("#Hide").click(function () {
+            $(".slide").slideUp(200);
+        })
+        $("#Show").click(function () {
+            $(".slide").slideDown(1000);
+        })
+        $("#Toggle").click(function () {
+            $(".slide").toggle(1000);
+        })
+
+        //9)
+
+        $(".pr9").mouseenter(function () {
+            $(this).next().addClass("highlight");
+        })
+        $(".pr9").mouseenter(function () {
+            $(this).removeClass("highlight");
+        })
+
+
+        //10)
+
+        $("#p10").click(function () {
+            $(".pr10").css("text-decoration", "underline");
+
+        })
+
+        //11)
+        $("#btn11").click(function () {
+            alert($("#p11").val());
+        })
+
+        //12)
+        $("#Row").click(function () {
+            var count = $("#table tr").length;
+            alert(count);
+        })
+        $("#column").click(function () {
+            var count = $("#table th").length;
+            alert(count);
+        })
+
+
+        //13)
+        $("#input2").keydown(function () {
+            $("#input2").css("background-color", "yellow");
+        });
+
+        //program 14 and 15
+
+        $("#button14").click(function () {
+            var list = $("#ul1").text();
+            var value = $("#input14").val();
+            // $('#ul1').append(value);
+            alert(list + "     " + value);
+        });
+
+
+        //program 16
+
+        var arr = ["Red", "Pink", "green", "White", "Black", "Blue", "Yellow", "purple"];
+        $("#colors").html(arr.join(" , "));
+
+        // //program 17  & 3
+
+        function blink_text() {
+                $('.blink').fadeOut(300);
+                $('.blink').fadeIn(300);
+                $('#blink_item').fadeOut(5000);
+                $('#blink_item').fadeIn(1000);
+            }
+            setInterval(blink_text, 1000);
+
+        //program 18
+
+        $("body").keypress(function () {
+            $(".shape").css('position', 'static');
+        });
+
+        //program 19
+
+        $("#button19").click(function () {
+            var val = $("#input19").val();
+            $("#drpDown #next").last().text(val);
+        });
+
+        //program 20
+        var max_length = 40;
+        $("textarea").keyup(function () {
+            var len = max_length - $(this).val().length;
+            $(".span").text(len);
+        })
+
+        //program 21
+        $("#color_cng").each(function () {
+            $("#div21").css("background", $(this).val());
+        });
+        $("#color_cng").change(function () {
+            $("#div21").css("background", $(this).val());
+        });
+
+        //program 22
+        $("#scroll").scroll();
+
+        //program 23
+        $("#pr23_bold").mouseenter(function () {
+            $("#pr23_bold").addClass("bold_23");
+        });
+
+        //Program 24
+        $("#button24").mousemove(function () {
+            $("#mouseMove").text("Hello").css({
+                "font-size": "40px",
+                "margin-left": "20px"
+            });
+        });
+
+        //program 25
+        $(".main").fadeOut(2000);
+
+        //Program 26
+        $("#button26").click(function () {
+            $("#bounceShape").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "70px"
+            }).animate({
+                marginLeft: "+=15px"
+            }, "fast").animate({
+                marginTop: "-70px"
+            });
+
+        });
+
+
+
+        //program 28 
+        $("#button28").click(function () {
+            var hgt1 = $("#height28").val();
+            var wgt1 = $("#width28").val();
+            $("#box28").height(hgt1).width(wgt1);
+        });
+
+        //program 29
+        $("#button29").click(function () {
+            var hgt = $("#height29").val();
+            var wgt = $("#width29").val();
+            $("#one2").height(hgt).width(wgt);
+        });
+
+        //program 30 
+        $("#button30").click(function () {
+            var hgt2 = $("#height30").val();
+            var wgt2 = $("#width30").val();
+            $("textarea").width(wgt2).height(hgt2);
+        });
+
+
+        //program 31
+        $("#pr31_btn").click(function () {
+            $("#box").animate({
+                width: "300px",
+                height: "300px",
+            }, 1500);
+        });
+
+        $("#pr31_btn").click(function () {
+            $("#box").animate({
+                width: "100px",
+                height: "100px",
+            }, 1500);
+        });
+
+        //program 32
+        $("#button32").click(function () {
+            $("#ovel").css({'height': '300px',
+                            'width' : '200px'})
+        });
+
+
+
+    });
+</script>
+
+</html>

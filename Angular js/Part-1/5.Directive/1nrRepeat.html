@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    
+</head>
+<body ng-app="myModule" ng-init="students=['Bill','Steve','Ram']">
+    <ol>
+        <li ng-repeat="name in students">
+            {{name}}
+        </li>
+    </ol>
+    <div ng-repeat="name in students">
+        {{name}}
+    </div>
+
+
+
+    
+    <div ng-controller = myController>
+        <table>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            
+            <tr ng-repeat = "employee in emp">
+                <td>{{ employee.firstname}}</td>
+                <td>  {{ employee.lastname}}</td>
+                <td> {{ employee.gender}}</td>
+                <td>  {{ employee.salary}}</td>
+                 
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        var app = angular.module('myModule', []);
+        app.controller('myController', function($scope) {
+            $scope.emp = [
+                { firstname:" Raj", lastname: "shah",gender: " Male",salary: " 55000"},
+                { firstname:" Rajveer", lastname: "shah",gender: " Male",salary: " 56000"},
+                { firstname:" Ravi", lastname: "shah",gender: " Male",salary: " 58000"},
+                { firstname:" Rushvi", lastname: "shah",gender: " Female",salary: " 59000"},
+                { firstname:" Rajal", lastname: "shah",gender: " Female",salary: " 58000"},
+                { firstname:" Raj", lastname: "shah",gender: " Male",salary: " 55000"},
+                { firstname:" Rajveer", lastname: "shah",gender: " Male",salary: " 56000"},
+                { firstname:" Ravi", lastname: "shah",gender: " Male",salary: " 58000"},
+                { firstname:" Rushvi", lastname: "shah",gender: " Female",salary: " 59000"},
+                { firstname:" Rajal", lastname: "shah",gender: " Female",salary: " 58000"},
+                { firstname:" Raj", lastname: "shah",gender: " Male",salary: " 55000"},
+                { firstname:" Rajveer", lastname: "shah",gender: " Male",salary: " 56000"},
+                { firstname:" Ravi", lastname: "shah",gender: " Male",salary: " 58000"},
+                { firstname:" Rushvi", lastname: "shah",gender: " Female",salary: " 59000"},
+                { firstname:" Rajal", lastname: "shah",gender: " Female",salary: " 58000"},
+            ];
+
+            // $scope.emp = emp;
+
+           
+        });
+    </script>
+
+
+</body>
+</html>

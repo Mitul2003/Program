@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM Registration Page</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            background-image: url('photo/home_BackGround.jpg');
+            margin-top: 40px;
+            background-position: center;
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        .regform {
+            width: 800px;
+            background-color: rgb(0 0 0 / 50%);
+            margin: auto;
+            color: #FFFFFF;
+            padding: 10px 0px 10px 0px;
+            text-align: center;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .main {
+            background-color: rgb(0, 0, 0, 0.5);
+            width: 800px;
+            margin: auto;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        #name {
+            width: 100%;
+            height: 100px;
+
+        }
+
+        .name {
+            margin-left: 25px;
+            margin-top: 30px;
+            width: 125px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .firstname {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+
+        }
+
+        .lastname {
+            position: relative;
+            left: 417px;
+            top: -80px;
+            line-height: 40px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .firstlabel {
+            position: relative;
+            color: #E5E5E5;
+            text-transform: capitalize;
+            font-size: 14px;
+            left: 203px;
+            top: -45px;
+        }
+
+        .lastlabel {
+            position: relative;
+            color: #E5E5E5;
+            text-transform: capitalize;
+            font-size: 14px;
+            left: 492px;
+            top: -76px;
+        }
+
+        .company {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 480px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .email {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 480px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .Code {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 95px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .number {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 255px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .area-code {
+            position: relative;
+            color: #E5E5E5;
+            text-transform: capitalize;
+            font-size: 16px;
+            left: 54px;
+            top: -4px;
+        }
+
+        .phone-number {
+            position: relative;
+            color: #E5E5E5;
+            text-transform: capitalize;
+            font-size: 16px;
+            left: -100px;
+            top: -2px;
+        }
+
+        .option {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 532px;
+            height: 40px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+            outline: none;
+            overflow: hidden;
+        }
+
+        .option option {
+            font-size: 20px;
+        }
+
+        #coustomer {
+            margin-left: 25px;
+            color: white;
+            font-size: 18px;
+            padding-top: 18px;
+
+        }
+
+        .radio {
+            display: inline-block;
+            padding-right: 70px;
+            font-size: 25px;
+            margin-left: 25px;
+            margin-top: 15px;
+            color: white;
+        }
+
+        .radioo {
+            display: flex;
+        }
+
+        .radio input {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .chatbox {
+            display: inline-block;
+            padding-right: 66px;
+            font-size: 23px;
+            margin-left: 8px;
+            margin-top: -7px;
+            color: white;
+        }
+
+        .chatboxx {
+            display: flex;
+        }
+
+        .chatbox input {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            /* cursor:pointer; */
+            outline: none;
+        }
+
+        button {
+            background-color: #3BAF9F;
+            display: block;
+            margin: 20px 0px 0px 20px;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid #366473;
+            padding: 14px 110px;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.25px;
+        }
+
+        button:hover {
+            background-color: #5390F5;
+        }
+
+        .reset {
+            background-color: #3BAF9F;
+            display: block;
+            margin: 20px 0px 0px 20px;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid #366473;
+            padding: 14px 116px;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.25px;
+        }
+
+        .reset:hover {
+            background-color: #5390F5;
+        }
+
+        .range {
+            margin-left: 205px;
+            margin-top: 30px;
+            width: 125px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .rangee {
+            margin-left: 270px;
+            margin-top: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="regform">
+        <h1>
+            Registration Form</h1>
+    </div>
+    <div class="main">
+
+        <form method="POST" autocomplete="on">
+            <div id="name">
+                <h2 class="name">
+                    Name </h2>
+                <input class="firstname" type="text" name="first_name" id="text" placeholder="First Name"><br>
+                <label class="firstlabel" for="text">first name</label>
+                <input class="lastname" type="text" name="last_name" id="lastname" placeholder="Last Name"><br>
+                <label class="lastlabel" for="lastname">last name</label>
+            </div>
+            <h2 class="name">
+                Refarl's Name </h2>
+            <input class="company" type="text" name="company" placeholder="Enter Your Refarl's Name">
+            <h2 class="name">
+                Email</h2>
+            <input class="email" type="email" name="email" placeholder="Enter Your Email-ID" >
+            <h2 class="name">
+                <h2 class="name">
+                    password</h2>
+                <input class="email" type="password" name="passeord" id="" placeholder="Enter your E-mail Password">
+                <h2 class="name">
+                    Phone</h2>
+                <input class="Code" type="text" name="area_code" id="code" pattern="+" title="You must be enter '+'" placeholder="Area Code">
+                <label class="area-code" for="code">Area Code</label>
+                <input class="number" type="text" name="phone" id="phone-Number" placeholder="Enter Your phone number">
+                <label class="phone-number" for="phone-Number">Phone Number</label>
+
+                <br>
+                <br>
+                <div class="radioo">
+                    <h2 id="coustomer">
+                        Gender</h2>
+                    <label class="radio" style="padding-left: 85px;">
+                        <input class="radio-one" type="radio" checked="checked" name="mygender">
+                        <span class="checkmark"></span>
+                        Male
+                    </label>
+                    <label class="radio">
+                        <input class="radio-two" type="radio" name="mygender">
+                        <span class="checkmark"></span>
+                        Female
+                    </label>
+                    <label class="radio">
+                        <input class="radio-three" type="radio" name="mygender">
+                        <span class="checkmark"></span>
+                        other
+                    </label>
+                </div>
+                <br>
+                <br>
+
+                <br>
+                <div>
+                    <h2 class="name">
+                        Date</h2><input class="company" type="date" name="mydate" id="">
+                </div>
+                <br>
+                
+                <div class="chatboxx">
+                    <h2 class="name" style="margin-top: -2px;">Workout</h2>
+                    <input style="display: block;
+                        padding-left: 12px;
+                        margin-left: 51px;" type="checkbox" id="MasalGain" name="MasalGain" value="">
+                    <label class="chatbox" for="MasalGain"> MasalGain</label><br>
+                    <input type="checkbox" id="GrowHeight" name="GrowHeight" value="">
+                    <label class="chatbox" for="GrowHeight"> GrowHeight</label><br>
+                    <input type="checkbox" id="Waitloss" name="Waitloss" value="">
+                    <label class="chatbox" for="Waitloss">Waitloss</label><br><br>
+                </div>
+
+                <h2 class="name">
+                    Workout Time</h2>
+                <label for="workoutTime"></label>
+                <select class="option" name="subject">
+                    <option disabled="disabled" selected="selected" id="workoutTime" >--Choose option--</option>
+                    <optgroup label="Morning">
+                        <option value="">5 to 7 AM</option>
+                        <option value="">8 to 10 AM</option>
+                    </optgroup>
+                    <optgroup label="Noon">
+                        <option value="">5 to 7 PM</option>
+                        <option value="">8 to 10 PM</option>
+                    </optgroup>
+                </select>
+
+                <label for="Time" class="range">Your Age (Between 15 to 75):</label>
+                <input class="rangee" type="range" id="vol" name="vol" min="0" max="50">
+
+                <div style="display: flex;">
+                    <button type="submit">Register</button>
+                    <input class="reset" type="reset" value="Reset">
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>

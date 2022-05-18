@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+<input ng-keyup="count = count + 1" ng-init="count=0" />
+<input ng-keydown="count1 = count1 + 1" ng-init="count1=0" />
+<input ng-keypress="count2 = count2 + 1" ng-init="count2=0" />
+<!--The keypress event is sent to an element when the browser registers keyboard ...
+ such as Shift , Esc , and delete trigger keydown events but not keypress events.-->
+<h1>{{count}}</h1>
+<h1>{{count1}}</h1>
+<h1>{{count2}}</h1>
+
+
+</body>
+</html>

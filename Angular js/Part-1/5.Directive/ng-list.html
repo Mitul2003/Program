@@ -1,0 +1,24 @@
+
+<!--
+The ng-list directive converts a string into an array of strings, 
+using a comma as the default separator.
+
+The value of the ng-list attribute defines the separator.-->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+
+<p>Write some names in the input field, use a comma to separate them:</p>
+
+<input ng-model="customers" ng-list/>
+
+<p>{{customers}}</p>
+
+</div>
+
+</body>
+</html>

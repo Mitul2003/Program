@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Css Display Propartiy</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+
+    }
+    header{
+        border: 2px solid;
+        margin: auto;
+        width: 1200px;
+    }
+    img{
+        width: 34px;
+        /* block -> size and Width Set kari sakay inlint -> jetali jagya hoi tetali jj rey */
+        display: block;   
+        margin: auto;
+    }
+    h3{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0px;
+        text-align: center;
+    }
+    .box{
+        border: 4px solid black;
+        background-color: red;
+        margin: 4px 0px;
+        padding: 23px;
+        width: 33%;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    .container{
+        margin: auto;
+        width: 1200px;
+    }
+</style>
+<body>
+    <header class="top">
+        <img src="https://www.bing.com/th?id=OIP.1YM53mG10H_U25iPjop83QHaEo&w=290&h=160&c=8&rs=1&qlt=90&dpr=1.25&pid=3.1&rm=2" alt="">
+        <h3>Wlcome to My Block</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam nostrum sint officiis eius iusto, dolorem quo, dignissimos, minima laboriosam tempora commodi aut unde esse voluptas sed nihil odit a optio voluptatem? Minus, illum tempore!</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam nostrum sint officiis eius iusto, dolorem quo, dignissimos, minima laboriosam tempora commodi aut unde esse voluptas sed nihil odit a optio voluptatem? Minus, illum tempore!</p>
+        </div>
+    </div>
+</body>
+</html>

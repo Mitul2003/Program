@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+AngularJs ng-dblclick Event Example
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+var app = angular.module('ngdblclickApp', []);
+app.controller('ngdblclickCtrl', function ($scope) {
+$scope.clkcount = 0;
+$scope.getdetails = function () {
+$scope.clkcount++;
+}
+});
+</script>
+</head>
+<body>
+<div ng-app="ngdblclickApp" ng-controller="ngdblclickCtrl">
+<h2>AngularJs ng-dblclick Event Directive Example</h2>
+<input type="button" style="cursor:pointer" value="Double Click Here" ng-dblclick ="getdetails()" /><br /><br />
+<span style="color:Red">No. of Times Event Called: {{clkcount}}</span>
+</div>
+</body>
+</html>

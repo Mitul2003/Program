@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOx Shadow and text Shadow</title>
+    <style>
+        .containr{
+            display: flex;
+        }
+        .card{
+            padding: 22px 12px;
+            margin: 22px 12px;
+            /* border: 2px red solid; */
+            background-color: sandybrown;
+
+    /* box-shadow: offset-x offset-y color; */
+    /* box-shadow: offset-x offset-y blur-radius color; */
+    /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+            /* box-shadow: 13px -8px green; */
+            /* box-shadow: 13px -8px 28px green; */
+            /* box-shadow: 13px -8px 28px 34px green; */
+            /* box-shadow: -7px -5px 10px 34px rgba(71, 172, 172, 0.5); */
+
+            box-shadow: inset 3px 5px green;
+            box-shadow: 3px 5px green, 4px 6px red;
+       }
+       .card h2{
+           /* text-shadow: 4px -1px white; */
+           text-shadow: 4px -1px 5px white;
+
+       }
+    </style>
+</head>
+<body>
+    <div class="containr">
+        <div class="card" id="card-1">
+            <h2>card1</h2>
+            <h2>This is C++ Course</h2>
+           <p>I have started C++ course which does not mean that we will stop this course. We will continue this course to completion. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium, doloremque enim repellat impedit autem nostrum facilis odio omnis optio voluptates beatae mollitia temporibus voluptas consequuntur harum animi totam molestiae labore architecto ratione qui!</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>card2</h2>
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat doloribus molestiae velit ipsum, aliquam officia ratione excepturi in officiis, incidunt quo est pariatur tempore ex, distinctio nostrum! Sint non doloribus rem obcaecati sunt.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>card3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, harum distinctio commodi odio, atque omnis iusto libero repellat laborum excepturi, illum delectus hic nulla quia accusantium magni! Nisi, accusamus modi.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

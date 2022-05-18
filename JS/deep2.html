@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title> Assignment 1</title>
+    <script src="/JS/jquery_3.6.0.min.js"></script>
+    <style>
+        #img1 {
+            position: relative;
+        }
+        
+        .circle {
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+        }
+        
+        .hello {
+            padding: 50px;
+            text-align: center;
+            background-color: burlywood;
+            font-size: 50px;
+            font-style: oblique;
+        }
+        
+        #pgph {
+            font-size: 25px;
+            width: auto;
+            text-align: justify;
+        }
+        
+        #pgph span {
+            text-decoration: underline;
+        }
+        
+        #inputtextBox {
+            font-size: large;
+            text-align: center;
+            background-color: bisque;
+            font-family: 'Lucida Sans';
+            margin-left: 30px;
+        }
+        
+        #table1 {
+            width: 500px;
+            height: fit-content;
+        }
+        
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        
+        #input2 {
+            margin-left: 30px;
+            border: 3px solid black;
+            width: 250px;
+            height: 30px;
+        }
+        
+        #colors {
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        
+        .shape {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: shape;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes shape {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: red;
+                left: 200px;
+                top: 0px;
+            }
+            50% {
+                background-color: red;
+                left: 200px;
+                top: 200px;
+            }
+            75% {
+                background-color: red;
+                left: 0px;
+                top: 200px;
+            }
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+        
+        #bounceShape {
+            background-color: blueviolet;
+            height: 70px;
+            width: 70px;
+            border-radius: 70px;
+            position: relative;
+        }
+        
+        #borderBox {
+            
+            height: 210px;
+            width: 400px;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        .bold_23 {
+            font-weight: bold;
+        }
+
+       
+        
+        .main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+        }
+        
+        .loader {
+            width: 40px;
+            height: 40px;
+            color: #1424fa;
+            border: 4px solid;
+            border-radius: 50px;
+            border-top-color: transparent;
+            animation: loader 1s linear infinite;
+        }
+        
+        @keyframes loader {
+            25% {
+                color: #03d644;
+            }
+            50% {
+                color: #fbfe09;
+            }
+            75% {
+                color: #fc0303;
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        #box28 {
+            border: 2px solid black;
+            height: 210px;
+            width: 300px;
+            position: relative;
+            margin-left: 40px;
+        }
+        
+        #one1 {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            background-color: pink;
+        }
+       
+        
+        #box29 {
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            margin-left: 40px;
+        }
+        
+        #one2 {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: palevioletred;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+        }
+
+        #ovel {
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            border-radius: 800px;
+            position: relative;
+        }
+        #div21{
+            width: 100px;
+            height: 100px;
+            border-radius: 200px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+
+            // program 1
+
+            $("#button1").dblclick(function() {
+                var str = $('textarea').val();
+                $('.box textarea').text(str);
+            });
+
+            // program 2
+
+            $("#button2").click(function() {
+                alert($("#Keyword").val());
+            });
+
+            //program 3        program 17
+
+            function blink_text() {
+                $('.blink').fadeOut(300);
+                $('.blink').fadeIn(300);
+                $('#blink_item').fadeOut(5000);
+                $('#blink_item').fadeIn(1000);
+            }
+            setInterval(blink_text, 1000);
+
+            // program 4
+
+            $("#button4").click(function() {
+                $("#Heading").remove();
+            });
+
+            // program 5
+
+            $("#img1").hover(function() {
+                $("#img1").animate({
+                    left: 300
+                });
+            });
+
+            // program 6
+
+            $("#button6").click(function() {
+                $(".circle").animate({
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+
+            // program 7
+
+            $("#fadeOutbtn").click(function() {
+                $("#img2").fadeOut(5000);
+            });
+
+            $("#fadeInbtn").click(function() {
+                $("#img2").fadeIn(5000);
+            });
+
+            // program 8
+
+            $("#button8").click(function() {
+                $(".hello").slideToggle("slow");
+            });
+
+            //program 9
+
+            $("#p1").mouseenter(function() {
+                $("#p2").css('background-color', 'yellow');
+            });
+            $("#p2").mouseenter(function() {
+                $("#p3").css('background-color', 'yellow');
+            });
+
+            $("#p3").mouseenter(function() {
+                $("#p4").css('background-color', 'yellow');
+            });
+
+            $("#p4").mouseenter(function() {
+                $("#p5").css('background-color', 'yellow');
+            });
+
+            $("#p5").mouseenter(function() {
+                $("#p1").css('background-color', 'yellow');
+            });
+
+            //program 10
+
+            $("#pgph").each(function() {
+                var words = $(this).text().split(" ");
+                $(this).empty();
+                for (var i = 0; i < words.length; i++) {
+                    $(this).append(" <span>" + words[i] + "</span>")
+                }
+            });
+
+            //program 11
+
+            $('#inputtextBox').click(function() {
+                alert($('#inputtextBox').val());
+            });
+
+            //program 12
+
+            $("#button12_1").click(function() {
+                var count = $("#table12 tr").length;
+                alert("Number of rows is:-" + count);
+            });
+
+            $("#button12_2").click(function() {
+                var count2 = $("#table12 th").length;
+                alert("Number of coulums is:-" + count2);
+            });
+
+            //program 13
+
+            $("#input2").keydown(function() {
+                $("#input2").css("background-color", "yellow");
+            });
+
+            //program 14 and 15
+
+            $("#button14").click(function() {
+                var list = $("#ul1").text();
+                var value = $("#input14").val();
+                alert(list + "     " + value);
+            });
+
+
+            //program 16
+
+            var arr = ["Red", "Pink", "green", "White", "Black", "Blue", "Yellow", "purple"];
+            $("#colors").html(arr.join(", "));
+
+
+            //program 18
+
+            $("body").keypress(function() {
+                $(".shape").css('position', 'static');
+            });
+
+            //program 19
+
+            $("#button19").click(function() {
+                var val = $("#input19").val();
+                $("#drpDown #next").last().text(val);
+            });
+
+            //program 20
+            var max_length = 40;
+            $("textarea").keyup(function() {
+                var len = max_length - $(this).val().length;
+                $(".span").text(len);
+            })
+
+            //program 21
+            $("#color_cng").each(function() {
+              $("#div21").css("background", $(this).val());
+            });
+            $("#color_cng").change(function() {
+            $("#div21").css("background", $(this).val());
+            });
+
+            //program 22
+            $( "#scroll" ).scroll();
+            
+            //program 23
+            $("#pr23_bold").mouseenter(function () {
+                $("#pr23_bold").addClass("bold_23");
+            });
+
+            //Program 24
+            $("#button24").mousemove(function() {
+                $("#mouseMove").text("Hello").css({
+                    "font-size": "40px",
+                    "margin-left": "20px"
+                });
+            });
+
+            //program 25
+            $(".main").fadeOut(2000);
+
+            //Program 26
+            $("#button26").click(function() {
+                $("#bounceShape").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "70px"
+                }).animate({
+                    marginLeft: "+=15px"
+                }, "fast").animate({
+                    marginTop: "-70px"
+                });
+
+            });
+
+           
+
+            //program 28 
+            $("#button28").click(function() {
+                var hgt1 = $("#height28").val();
+                var wgt1 = $("#width28").val();
+                $("#box28").height(hgt1).width(wgt1);
+            });
+            
+            //program 29
+            $("#button29").click(function() {
+                var hgt = $("#height29").val();
+                var wgt = $("#width29").val();
+                $("#one2").height(hgt).width(wgt);
+            });
+
+            //program 30 
+            $("#button30").click(function() {
+                var hgt2 = $("#height30").val();
+                var wgt2 = $("#width30").val();
+                $("#textarea30 textarea").width(wgt2).height(hgt2);
+            });
+
+           
+            //program 31
+            $( "#pr31_btn" ).click(function() {
+                $( "#box" ).animate({
+                    width: "300px",
+                    height: "300px",
+                }, 1500 );
+            });
+
+            $( "#pr31_btn" ).click(function() {
+                $( "#box" ).animate({
+                    width: "100px",
+                    height: "100px",    
+                }, 1500 );
+            });
+
+             //program 32
+             $("#button32").click(function() {
+                $("#ovel").css('height', '300px')
+            });
+        });
+    </script>
+</head>
+
+
+    <!-- program 1 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 1</h1>
+    <h3> Write the paragraph </h3>
+
+    <textarea name="message" rows="10" cols="30" required>
+        </textarea>
+    <br>
+    <br>
+    <button id="button1" style="margin-left: 70px; font-size: larger; border: 2px solid black;"> Submit </button><br><br>
+    <div class="box">
+        <h3>The text is</h3> <br>
+        <textarea name="message" rows="10" cols="30">
+
+    </textarea></div>
+    <br>
+
+    <!-- program 2 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 2</h1>
+    <h3 style=" margin-left: 10px;"> Enter The Text</h3>
+    <input type="text" id="Keyword" style="border: solid black; font-size: medium;  margin-left: 5px;">
+    <br></br>
+    <button id="button2" style="margin-left: 75px;font-size: large; border: 2px solid;">click</button><br><br><br>
+
+    <!-- program 3 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 3</h1>
+    <p style="color: red; font-size: larger; font-family: Arial; margin-left: 70px;">Hello <span class="blink">umang mandanka</span> </p>
+
+    <!-- program 4 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 4</h1>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <div id="Heading" style="color: blueviolet;">
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </div>
+    <button id="button4">click to remove</button><br><br>
+
+    <!-- program 5 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 5</h1>
+    <div id="img1">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="Show nature pic" style="width: 400px;">
+    </div><br><br>
+
+    <!-- program 6 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 6</h1>
+    <div class="circle"> </div>
+
+    <button id="button6" style="margin-left: 30px; margin-top: 40px; font-size: large;">click</button><br><br>
+
+
+    <!--program 7 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 7</h1>
+    <div id="img2">
+        <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__340.jpg" alt="Image" height="333" width="500">
+    </div>
+    <br>
+    <button id="fadeOutbtn">Fade Out</button>
+    <button id="fadeInbtn">Fade In</button><br><br>
+
+    <!-- program 8 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 8</h1>
+    <div class="hello">Hello world!</div>
+    <br>
+    <br>
+    <button id="button8" style="height: 30px; margin-left: 50px; text-align: center;">Click to slide the panel down or up 
+      </button><br><br>
+
+    <!--program 9-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 9</h1>
+    <div id="p1">
+        <p>Gujarat is a state on the western coast of India with a coastline of 1,600 km . most of which lies on the Kathiawar peninsula and a population of 60.4 million. It is the fifth-largest Indian state by area and the ninth-largest state by population.
+            Gujarat is bordered by Rajasthan to the northeast, Dadra and Nagar Haveli and Daman and Diu to the south, Maharashtra to the southeast, Madhya Pradesh to the east, and the Arabian Sea and the Pakistani province of Sindh to the west.</p>
+        <br>
+    
+    <p id="p2">The economy of Gujarat is the fifth-largest in India, with a gross of ₹16.58 trillion and has the country's 10th-highest GSDP per capita of ₹213,936 (US$2,800). Gujarat ranks 21st among Indian states in human development index. The state traditionally
+        has low unemployment and is widely considered one of the most industrially developed states of India and a manufacturing hub.</p>
+    <br>
+
+    <p id="p3">state encompasses 23 sites of the ancient Indus Valley Civilisation , The most important sites are Lothal , Dholavira , and Gola Dhoro. Lothal is believed to have been one of the world's first seaports. Gujarat's coastal cities, chiefly Bharuch and
+        Khambhat, served as ports and trading centres in the Maurya and Gupta empires, and during the succession of royal Saka dynasties in the Western Satraps era.</p>
+    <br>
+
+    <p id="p4">The Gir Forest National Park in Gujarat is home to the only wild population of the Asiatic lion in the world. Along with Bihar, Mizoram and Nagaland, Gujarat is one of four Indian states to prohibit the sale of alcohol.</p>
+    <br>
+
+    <p id="p5"> Gujarat was one of the main central areas of the Indus Valley Civilisation. It contains ancient metropolitan cities from the Indus Valley such as Lothal, Dholavira and Gola Dhoro. The ancient city of Lothal was where India's first port was established.
+        The ancient city of Dholavira is one of the largest and most prominent archaeological sites in India, belonging to the Indus Valley Civilisation. The most recent discovery was Gola Dhoro.</p>
+    <br>
+    </div>
+    
+    <!-- program 10 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">Program 10</h1>
+    <p id="pgph">Gujarat is a state on the western coast of India with a coastline of 1,600 km . most of which lies on the Kathiawar peninsula and a population of 60.4 million. It is the fifth-largest Indian state by area and the ninth-largest state by population.</p>
+    <br>
+
+    <!-- program 11 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 11</h1>
+    <input type="text" id="inputtextBox" value="Hello Everyone" />
+    <br><br><br>
+
+    <!-- program 12 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 12</h1>
+    <table id="table12">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+        </tr>
+    </table>
+    <br><br>
+    <button id="button12_1" style="font-size: large; text-align: center;">click to count the row</button>
+    <button id="button12_2" style="font-size: large; text-align: center;">click to count the column</button>
+    <br>
+
+    <!-- program 13 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 13</h1>
+    <input id="input2" type="text">
+    <br>
+
+    <!--Program 14 & 15-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 14 & 15</h1>
+    <ul id="ul1">
+        <li>C Language</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+
+    </ul><br>
+    <input type="text" placeholder="Add New Item" style="font-size:19px;" id="input14">
+    <button style="font-size:15px;" id="button14">Submit</button>
+    </div><br><br>
+
+
+    <!-- progarm 16 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 16</h1>
+    <h3 style="margin-left: 20px; font-size: 25px; text-decoration: underline;">Color</h3>
+    <div id="colors">
+    </div><br>
+
+    <!---program 17-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 17</h1>
+    <ol start="5" id="blink_item" style="color:orange;">
+        <li>Ahmedabad</li>
+        <li>Surat</li>
+        <li>Amreli</li>
+        <li>Rajkot</li>
+    </ol>
+    <!-- program 18 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 18</h1>
+    <div class="shape"></div>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <!-- program 19 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 19</h1>
+    <input type="text" placeholder="Add new item" style="font-size:19px" id="input19">
+    <button id="button19">ADD</button>
+    <br><br><br><br>
+    <div id="drpDown" style="margin-left: 70px;">
+        <select style="font-size:19px;">
+        
+            <option>C</option>
+            <option>CPP</option>
+            <option>C#</option>
+            <option>JavaScript</option>
+            <option id="next">Python</option>
+            
+        </select>
+
+    </div><br><br>
+
+    <!---program 20-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 20</h1>
+    <textarea maxlength="40"></textarea><br><br>
+    <span class="span">40</span> charecters are remaining
+
+    <!--program 21-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 21</h1>
+    <div style="border: 2px;">
+        <select style="font-size: 25px;margin-left:50px" id="color_cng">
+            <option value="pink">Pink</option>
+            <option>Orange</option>
+            <option>Blue</option>
+            <option>Tomato</option>
+        </select>  
+    </div>
+    <div id="div21" style="margin-left:50px ;margin-top: 30px;"></div>
+    <br>
+
+    <!--program 22-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 22</h1>
+    <div id="scroll" style="overflow: scroll; width: 250px; height: 200px;">
+        “There is a lot of talking going on in the world right now. There is not a whole lot of listening. If we switched it around – more listening and less talking – we would see miracles.” – Kay Lindahl <br><br>
+
+        In a social zeitgeist that emphasizes talking, verbalizing, and presenting one’s self, Kay Lindahl has steadfastly worked to reverse this equation: since the early 1990s, she has been teaching people how to listen – a composite form of inner and outer listening with a deeply spiritual grain.<br><br>
+
+        Kay’s mission began around 1991 when she founded The Alliance for Spiritual Community (ASC), a grassroots interfaith organization creating dialogue among people of diverse faiths, cultures, and spiritual practices. Having recently relocated to a new community with her husband, she started ASC from their living room to bring a “strong spiritual presence” to her new community.
+    </div>
+    <br>
+
+    <!--program 23-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 23</h1>
+    <ol  id="pr23_bold" style="font-size: 25px;">
+        <li>Rose</li>
+        <li>Lotus</li>
+        <li>Lily</li>
+        <li>Jasmine</li>
+    </ol>
+    <!-- program 24 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 24</h1>
+    <div id="mouseMove">
+        <button id="button24" style="font-size:15px;margin-left:20px;">MouseMove</button>
+    </div><br><br>
+
+     <!--Program 25-->
+     <h1 style="text-decoration: underline; margin-left: 70px;">program 25</h1>
+     <br><br>
+     <div class="main">
+         <div class="loader">
+         </div>
+     </div>
+     <h2 style="margin-left: 70px;">JQuery Programs</h2><br><br><br>
+
+    <!--Program 26-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 26</h1>
+    <div id="bounce">
+        <button id="button26" style="font-size:19px">BounceShape</button><br><br>
+        <div id="borderBox"><br><br><br><br>
+            <div id="bounceShape"></div>
+        </div>
+    </div><br><br><br>
+
+    
+
+    <!--Program 28 -->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 28</h1><br><br>
+    <input id="height28" type="text" placeholder="Enter height for shape">
+    <input id="width28" type="text" placeholder="Enter width for shape"><br><br>
+    <button style="font-size: medium; font-family: Times New Roman;" id="button28">Setout</button><br><br><br><br>
+    <div id="box28">
+        <div id="one1"></div>
+    </div><br><br><br>
+
+    <!--Program 29-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 29</h1><br><br>
+    <input id="height29" type="text" placeholder="Enter height for shape">
+    <input id="width29" type="text" placeholder="Enter width for shape"><br><br>
+    <button id="button29" style="font-size: medium; font-family: Times New Roman;">SetInner</button><br><br><br>
+    <div id="box29">
+        <div id="one2">
+        </div>
+    </div><br><br><br>
+
+    <!--Program 30-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 30</h1><br><br>
+    <div id="textarea30">
+        <input id="height30" type="text" placeholder="Enter the height of the shap">
+        <input id="width30" type="text" placeholder="Enter the width of the shap"><br><br><br>
+        <textarea style="margin-left: 70px;">
+        </textarea><span></span><br><br><br>
+        <button id="button30" style="font-size: larger; font-family: Times New Roman; margin-left: 70px; width: 100px;">Set 
+
+        </button>
+    </div><br><br>
+
+    
+
+    <!--program 31-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 31</h1>
+    <button id="pr31_btn" style="font-size: 20px;">Animate height & width</button>
+    <div id="box" style="background: #B45F04; margin-top: 5px; "></div>
+
+    <!--Program 32-->
+    <h1 style="text-decoration: underline; margin-left: 70px;">program 32</h1><br><br><br>
+    <div id="ovel">
+    </div><br><br>
+    <button id="button32" style="font-size: large; font-family: Times New Roman; margin-left: 70px;">Click </button>
+</body>
+
+</html>

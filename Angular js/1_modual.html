@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body>
+    <!-- use of [] brekets to creat new modual -->
+
+    <!-- 1 -->
+    <!-- <div ng-app="myapp" ng-controller="myctr">
+        {{ firstName + " " + lastName }}
+    </div> -->
+
+    <!-- 2 -->
+    <div ng-app="myApp" constacter></div>
+
+</body>
+<script>
+    // var app = angular.module("myapp", []);
+
+    // app.controller("myctr",($scope) => {
+    //     $scope.firstName = "Mitul";
+    //     $scope.lastName = "Dudhat";
+    // })
+
+    var app = angular.module("myApp", []);
+
+    app.directive("constacter",  () => {
+        return {
+            template: "I was made in a directive constructor!"
+        };
+    });
+</script>
+
+</html> 
+

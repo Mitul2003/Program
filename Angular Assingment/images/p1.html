@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-app="MyApp" ng-controller="MyCtr">
+    <h1>Bio Data</h1>
+    My Name is {{name}} <br>
+    I am Study is {{Colleg}} <br>
+    I am {{age}} Year old <br>
+    </div>
+    <script>
+        var app = angular.module("MyApp",[]);
+        app.controller("MyCtr", ($scope) => {
+            $scope.name = 'Mitul Dudhat'
+            $scope.Colleg = 'K.S School of ..'
+            $scope.age = '20'
+
+        })
+    </script>
+</body>
+</html>

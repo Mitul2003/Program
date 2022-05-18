@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MITUL Gym Fitness</title>
+    <style>
+        body{
+            color: white;
+            margin:0px;
+            padding:0px;
+            background: url('11.jpg') no-repeat;
+             font-family: 'Baloo Bhaina 2', cursive;;
+        }
+        .left{
+            display: inline-block;
+            border: 2px red solid;
+            position: absolute;
+            left: 34px;
+            top: 20px;
+        }
+        .left img{
+            width :136px;
+        }
+        .left div{
+            text-align: center;
+        }
+        .mid{
+            display: block;
+            border: 2px yellow solid;
+            width: 49%;
+            margin: 20px auto;
+        }
+        .right{
+            position: absolute;
+            right: 34px;
+            top: 20px;
+            border: 2px green solid;
+            display: inline-block;
+            color: black;
+        }
+        .navbar{
+            display: inline-block;
+        }
+        .navbar li{
+            color: white;
+            display: inline-block;
+            font-size: 25px ;
+        }
+        .navbar li a{
+            color: white;
+            text-decoration: none;
+            padding: 34px 23px;
+        }
+        .navbar li a:hover, .navbar li a:active{
+            text-decoration: underline;
+            color: rgb(240, 13, 13);
+        }
+        .btn{
+            margin: 0px 9px;
+            padding: 4px 14px;
+            border: 2px soli gray;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: burlywood;
+        }
+          
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+      <img src="logo.jpg" alt="">
+      <div>
+          MITUL Fitness
+      </div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+                <ul class="navbar">
+                    <li> <a href="#" class="Active">Home</a> </li>
+                    <li> <a href="#">About us</a> </li>
+                    <li> <a href="#">Fitness Calculator</a> </li>
+                    <li> <a href="#">Contact us</a> </li>
+                </ul>
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+           <button class="btn">call us Now</button>
+           <button class="btn">email us</button>
+        </div>
+    </header>
+    
+</body>
+</html>

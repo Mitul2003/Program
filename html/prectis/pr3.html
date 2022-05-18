@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>pr3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body onload="fun3()">
+    <h1>Apply  Events</h1><br>
+
+    <h3>1.Onclick Events</h3>
+    <button onclick="fun1()">Click</button>
+    <h3>2.Onload Events</h3>
+    <button onload="fun2()">Click</button>
+    <h3>3.Onmouseover Events</h3>
+    <button onmouseover="fun3()">Click</button>
+    <h3>4.Onkeydown Events</h3>
+    <input type="text" onkeydown="fun4()">
+    <script>
+        function fun1(){
+            a = Date();
+            document.write(a);
+        }
+        function fun2(){
+            alert("Onload Event");
+        }
+        function fun3(){
+       
+            alert("Mouse Over Event")    
+        }
+        function fun4(){
+        alert("You press key inside the input field");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--avaScript Object Notation (JSON) is a standard text-based format for representing structured
+ data based on JavaScript object syntax. 
+ It is commonly used for transmitting data in web applications 
+ (e.g., sending some data from the server to the client, so it can be displayed on a web page,
+ or vice versa).-->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="jsCtrl">
+
+<h1>Customer:</h1>
+
+<pre>{{customer | json}}</pre>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('jsCtrl', function($scope) {
+    $scope.customer = {
+        name : "Alfreds Futterkiste",
+        "city" : "Berlin",
+        "country" : "Germany"
+    };
+});
+</script>
+
+<p>The json filter converts a JavaScript object into a JSON string.</p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+ngPattern adds the pattern validator to ngModel. 
+It is most often used for text-based input controls, 
+but can also be applied to custom text-based controls.-->
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>ng-pattern Directive</title> 
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"> 
+	</script> 
+</head> 
+
+<body ng-app="app" style="text-align:center"> 
+	
+	<h1 style="color:green;">ng-pattern</h1> 
+	<h2>ng-pattern Directive</h2> 
+
+	<div ng-controller="geek"> 
+		<ng-form name="num"> 
+			Input Number: <input type="text" ng-model="number"
+				name="number" ng-pattern="re" /><br /> 
+			
+			<span ng-show="num.number.$error.pattern" style="color:red"> 
+				Input is not valid. 
+			</span> 
+		</ng-form> 
+	</div> 
+	
+	<script> 
+		var app = angular.module("app", []); 
+		
+		app.controller('geek', function ($scope) { 
+			$scope.re = /^[0-9]{1,6}$/; 
+// the expression evaluates to a string, converted to a Exp afterwrapping it in ^ and $ characters
+
+			
+		}); 
+	</script> 
+</body> 
+
+</html>					 

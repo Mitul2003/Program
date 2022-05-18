@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+</head>
+<body ng-app >
+Enter Amount:<input type="number" ng-model= "price"><br>
+The amount is: {{price | currency :"R" }}<!--currency :"R"-->
+</body>
+</html>

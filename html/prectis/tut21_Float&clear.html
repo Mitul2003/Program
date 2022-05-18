@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+</head>
+<style>
+    *{
+box-sizing: border-box;
+    }
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .conteiner{
+        width: 900px;
+        border: 3px solid purple;
+        margin: 33px auto;
+
+}
+.item{
+    border: 3px solid grey;
+    margin: 12px 3px;
+    padding: 12px 3px;
+    background-color: rgb(252, 174, 174);
+}
+#fruits{
+    float: left;
+    width: 48%;
+}
+#Computer{
+    float: left;
+    width: 48%;
+}
+#Staionary{
+    /* float: left; */
+    width: 100%;
+    clear: both;
+}
+p,h3{
+    text-align: right;
+    text-align: left;
+    text-align: center;
+    text-align: justify;
+}
+h1{
+    margin: auto;
+    width: 455px;
+}
+</style>
+<body>
+    <div class="conteiner"> 
+        <h1>Wlcome to my store</h1>
+        <div id="fruits" class="item"> 
+            <h3>fruits</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, aspernatur et! Beatae corporis magni at dolor quis hic velit culpa quia, sed laudantium tempore? Vitae quaerat repellat dignissimos? Placeat, quos?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi deleniti fuga explicabo, beatae pariatur veritatis praesentium numquam voluptatum quo dolorem dolores cupiditate officia minus eum, unde error placeat natus quam!</p>
+        </div>
+        <div id="Computer" class="item"> 
+            <h3>Computer</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, aspernatur et! Beatae corporis magni at dolor quis hic velit culpa quia, sed laudantium tempore? Vitae quaerat repellat dignissimos? Placeat, quos?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum quos facere rem dolore culpa! Minus unde quis quae consequuntur, aliquam quasi saepe iste asperiores dignissimos soluta nihil, accusamus iusto praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, itaque. Explicabo officiis ipsum nisi! Inventore commodi voluptatum, aut sed sit quis amet ipsum incidunt odit ratione beatae dignissimos harum veritatis!</p>
+        </div>
+        <div id="Staionary" class="item"> 
+            <h3>Staionary</h3>
+            <p id="Staionarypara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, aspernatur et! Beatae corporis magni at dolor quis hic velit culpa quia, sed laudantium tempore? Vitae quaerat repellat dignissimos? Placeat, quos?</p>
+        </div>
+    </div>
+</body>
+</html>

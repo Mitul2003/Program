@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with form</title>
+    <style>
+        .r{
+            border: solid 2px black;
+        }
+    </style>
+</head>
+<body>
+    <form action="abc.html"></form>
+    <table style="border: solid 2px black;">
+            <tr >
+                <td class="r">
+               <label for="fname">First Name</label>
+               </td>
+
+               <td class="r">
+                   <input type="text" name="First Name" id="fname">
+               </td>
+            </tr>
+            <tr >
+                <td class="r">
+               <label for="lname">Last Name</label>
+               </td>
+
+               <td class="r">
+                   <input type="text" name="Last Name" id="lname">
+               </td>
+            </tr>
+            <tr>
+                <td class="r">
+                    <label for="uname">User Name</label>
+                </td>
+                <td class="r">
+                    <input type="text" name="Usar Name" id="uname">
+                </td>
+            </tr>
+            <tr>
+                <td class="r">
+                    <label for="password">password</label>
+                </td>
+                <td class="r">
+                    <input type="text" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td class="r">
+                    <label for="Gender">Gender</label>
+                </td>
+                <td class="r">
+                    Male<input type="radio" name="mygender" id="Gender">Female <input type="radio" name="mygender" id="Gender">
+                </td>
+            </tr>
+            <tr>
+                <td class="r">
+                    <label for="Address">Address</label>
+                </td>
+                <td class="r">
+                    <textarea name="Address" id="Address" cols="10">
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class=r>
+                    <label for="City">City</label>
+                </td>
+                
+                <td class="r">
+                    <select name="city" id="City">
+                    <option value="surat">surat</option>
+                    <option value="Rajkot">Rajkot</option>
+                    <option value="Junagadha">Junagadha</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="r">
+                    <label for="Hobbies">Hobbies</label>
+                </td>
+                <td class="r"> 
+                    cricket<input type="checkbox" name="cricket" id="Hobbies">
+                    footbol<input type="checkbox" name="footbol" id="Hobbies">
+                    kabadi<input type="checkbox" name="kabadi" id="Hobbies">
+                </td>
+            </tr>
+            <tr>
+                <td class="r">
+                    <input type="submit" value="submit">
+                </td>
+                <td class="r">
+                    <input type="reset" value="reset">
+                </td>
+            </tr>
+
+        
+    </table>
+</body>
+</html>

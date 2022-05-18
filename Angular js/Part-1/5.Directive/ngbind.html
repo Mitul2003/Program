@@ -1,0 +1,20 @@
+<!--
+The ng-bind directive binds the model property declared via $scope or 
+ng-model directive or the result of an expression to the HTML element.
+It also updates an element if the value of an expression changes.
+-->
+
+<!DOCTYPE html>
+<html >
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <div>
+        5 + 5 = <span ng-bind="5 + 5"></span> <br />
+
+        Enter your name: <input type="text" ng-model="name" /><br />
+        Hello <span ng-bind="name"></span>
+    </div>
+</body>
+</html>

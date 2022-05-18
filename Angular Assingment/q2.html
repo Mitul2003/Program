@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="cal" ng-controller="cal_con">
+        <p>Enter number 1 :
+            <input type="number" ng-model="num1">
+        </p>
+        <p>Enter number 2 :
+            <input type="number" ng-model="num2">
+        </p>
+        <p>Select opration :
+            <select ng-model="op">
+                <option>/</option>
+                <option>+</option>
+                <option>*</option>
+                <option>-</option>
+            </select>
+        </p>
+        <p>Answer is : {{res()}}</p>
+    </div>
+</body>
+<script>
+    var app = angular.module("cal", []);
+    var con = function ($scope) {
+        $scope.res = function () {
+            if ($scope.op == "-") {
+                return $scope.num2 - $scope.num1;
+            }
+            if ($scope.op == "*") {
+                return $scope.num2 * $scope.num1;
+            }
+            if ($scope.op == "/") {
+                return $scope.num2 / $scope.num1;
+            }
+            if ($scope.op == "+") {
+                return $scope.num2 + $scope.num1;
+            }
+        }
+    };
+    app.controller("cal_con", con);
+</script>
+
+</html>

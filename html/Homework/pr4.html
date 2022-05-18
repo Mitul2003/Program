@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <form id="form" onsubmit="return myfun()">
+        <td>Name :<input type="text" id="fname" value=""><br></td>
+        <span id="Message1"></span><br>
+
+        <td>SurName :<input type="text" id="sname" value=""><br></td>
+        <span id="Message2"></span><br>
+        <br>
+
+        <td> Enter Moblie Number :<input type="text" id="mname" value=""><br></td>
+        <span id="Message3"></span><br>
+
+        <td>Email :<input name="" id="email" type="text"><br></td>
+        <span id="text"></span><br>
+        <br>
+
+        <td>Enter Password :<input type="password" id="pswd" value=""><br></td>
+        <span id="Message4"></span><br>
+        <br>
+
+        <td>Confirm Password :<input type="password" id="pswd1" value=""><br></td>
+        <span id="Message5"></span><br>
+        <br>
+
+        <input type="submit" value="submit" onclick="fun1()"></input><br>
+
+    </form>
+    <script>
+        function myfun() {
+            var c = /^[A-Z]+$/;
+            var mo = /^\d{10}$/;
+
+            var a = document.getElementById("fname").value;
+            var b = document.getElementById("sname").value;
+            var m = document.getElementById("mname").value;
+            var pw = document.getElementById("pswd").value;
+            var pw1 = document.getElementById("pswd1").value;
+
+            var form = document.getElementById("form");
+            var email = document.getElementById("email").value;
+            var text = document.getElementById("text");
+            var pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            if (a == "") {
+                document.getElementById("Message1").innerHTML = "*Please fill Name";
+                return false;
+            }
+            if (a.match(c))
+                true;
+            else {
+                document.getElementById("Message1").innerHTML = "Only Alphabets are Allow";
+                return false;
+            }
+            if (b == "") {
+                document.getElementById("Message2").innerHTML = "*Please fill Name";
+                return false;
+            }
+            if (b.match(c))
+                true;
+            else {
+                document.getElementById("Message2").innerHTML = "Only  Capital Alphabets are Allow";
+                return false;
+            }
+
+            if (m == "") {
+                document.getElementById("Message3").innerHTML = "*Please Enter Mobile Number";
+                return false;
+            }
+
+            if (m.length < 10) {
+                document.getElementById("Message3").innerHTML = "*Mobile Number Must be 10 digit";
+                return false;
+            }
+            if (m.length > 10) {
+                document.getElementById("Message3").innerHTML = "*Mobile Number Must be 10 digit";
+                return false;
+            }
+            if (m.match(mo))
+                true;
+            else {
+                document.getElementById("Message3").innerHTML = "Only Number are Allow";
+                return false;
+            }
+            if (isNaN(m)) {
+                document.getElementById("Message3").innerHTML = "*Enter Only Numeric Value";
+                return false;
+            }
+
+            if (email.match(pattern)) {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "Your Email Address in valid";
+                text.style.color = "red";
+
+            }
+
+            else {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text.innerHTML = "Please Enter Valid Email Address";
+                text.style.color = "green";
+
+            }
+
+            if (email == "") {
+                form.classList.remove("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "";
+                text.style.color = "red";
+
+            }
+
+
+            if (pw == "") {
+                document.getElementById("Message4").innerHTML = "*Please fill the password!";
+                return false;
+            }
+
+            if (pw.length < 5) {
+                document.getElementById("Message4").innerHTML = "*Password length must be atleast 8 characyers";
+                return false;
+            }
+
+            if (pw.length > 10) {
+                document.getElementById("Message4").innerHTML = "*Password length must be exceed 15 characyers";
+                return false;
+            }
+
+            if (pw != pw1) {
+                alert("Passwords did not match");
+            }
+            else {
+                alert("YOUR DATA SUBMIT SUCCESSFULLY");
+            }
+
+
+
+
+
+            function fun1() {
+                alert("Your Data Submit Successfully");
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

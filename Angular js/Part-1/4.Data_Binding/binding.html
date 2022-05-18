@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<body>
+
+<!-- Ng-model work with input,select,textarea-->
+
+
+<div ng-app="myModule" ng-controller="myController">
+    Name: <input ng-model="message2">  <!--message2-->
+    <h1>{{message}}</h1>
+	<h1>{{message2}}</h1>
+</div>
+
+<script>
+var app = angular.module('myModule', []);
+app.controller('myController', function($scope) {
+    $scope.message2 = "Angu";
+   
+});
+</script>
+</body>
+</html>

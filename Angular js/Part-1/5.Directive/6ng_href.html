@@ -1,0 +1,18 @@
+<!--
+The ng-href directive should be used instead of href if you have AngularJS code inside the href value.
+The ng-href directive makes sure the link is not broken even if
+ the user clicks the link before AngularJS has evaluated the code.-->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+<div ng-init="myVar = 'https://ksschool.org.in/'">
+
+<h1>Href tag</h1>
+<p>Go to <a ng-href="{{myVar}}">{{myVar}}</a> to learn!</p>
+
+</div>
+
+</body>
+</html>

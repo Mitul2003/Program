@@ -1,0 +1,16 @@
+<!--
+The ng-click directive tells AngularJS what to do when an HTML element is clicked.
+-->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+<p>Click the button:</p>
+
+<button ng-click="count = count + 1" ng-init="count=0">OK</button>
+
+<p>The button has been clicked {{count}} times.</p>
+</body>
+</html>

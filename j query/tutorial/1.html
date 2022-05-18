@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<script src="/j query/jquery_3.6.0.min.js"></script>
+<style>
+    #box{
+        background-color: red;
+        padding: 100px;
+        margin: 10px;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+
+        // $('button').click(function(){   // selector
+            // $('#box').toggle(1000);  // id
+            // $('.boxes').toggle();       // class
+            // alert('my first jquer code');
+        // })
+
+        // $('span').hide();  // efect
+
+        // $('input').focus(function(){
+        //     $('#focus').show().fadeOut(2000);
+            
+        // })
+        // $('input').blur(function(){
+        //     $('#bluer').show().fadeIn(1000);
+        // })
+
+    
+
+
+        // multipale Event
+        //css
+        // $('#box').on({
+        //     mouseenter : () => {
+        //         $(this).css({
+        //             border : 'solid',
+        //             height : '100px',
+        //             "background-color":"blue"
+        //         })
+        //         .slideUp(3000)
+        //         .slideDown(3000);
+        //     },
+        //     mouseleave : function(){
+        //         $(this).css('background-color','yellow');
+        //     }
+        // })
+
+        //html
+        // $('button').click(function(){
+        //     $('ul').append('<li>Vaibhav</li>')
+        // })
+
+        // $('button').click(function(){
+        //     $('ol').prepend('<li>Vaibhav</li>')
+        // })
+
+        // $('button').click(function(){
+            // $('#box').remove();  // remove all
+            // $('div').remove(".boxes");  
+            // $('#box').empty();  // child remove
+        //     $("#box").html("Write the html")
+        // })
+
+        // traversing
+
+        // $('button').click(function(){
+        //     $('#box').fadeOut(2000);
+        // })
+
+        // $('button').click(function(){
+        //     $('#box').fadeTo(2000,0.15);
+        // })
+        
+     
+    })
+</script>
+<body>
+    <button>hello</button>
+
+    <div id="box" class="boxes" >
+        <span class="sp">this is span tag</span>
+        <br>
+            This div tag not require space
+    </div>
+    <div>
+        secon div tag
+    </div>
+
+    Enter name : <input type="text">
+
+    <span id="bluer">
+        Bluer ID 
+    </span>
+    <br>
+    <span id="focus">
+        &nbsp; Focus ID
+    </span>
+
+    <ul>
+        <li>mitul</li>
+        <li>keyur</li>
+    </ul>
+    <ol>
+        <li>mitul</li>
+        <li>keyur</li>
+    </ol>
+</body>
+</html>

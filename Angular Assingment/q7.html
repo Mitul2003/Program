@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<title>Q7</title>
+</head>
+
+<body ng-app="myapp">
+    <div style="text-align: center;">
+        <a href="#/!">Page 1</a><br>
+        <a href="#!page1">Page 2</a><br>
+        <a href="#!page2">Page 3</a><br>
+        <a href="#!page3">Page 4</a><br>
+        <a href="#!page4">Page 5</a><br>
+
+    </div>
+    <div ng-view></div>
+    <script>
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    template: "<h1>Page 1 </h1>"
+                })
+                .when("/page1", {
+                    template: "<h1>Page 2 </h1>"
+                })
+                .when("/page2", {
+                    template: "<h1>Page 3 </h1>"
+                })
+                .when("/page3", {
+                    template: "<h1>Page 4 </h1>"
+                })
+                .when("/page4", {
+                    template: "<h1>Page 5 </h1>"
+                });
+        });
+    </script>
+</body>
+</html>

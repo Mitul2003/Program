@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app ="myModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myController">
+        <div >  <!--without ng-app expression print as it is without processing/ -->
+            Name : {{ student.name }} 
+        </div>
+        <div>
+            
+            Division : {{ student.division }}
+        </div>
+        <div>
+            Subject : {{ Empl.subject }}
+        </div>
+        <div>
+            Year : {{ student.year }}
+        </div>
+        <div>
+            Course : {{ student.course }}
+        </div>  
+    </div>
+</body>
+</html>

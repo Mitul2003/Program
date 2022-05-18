@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <style>
+        .hr {
+            background-color: black;
+            height: 5px;
+        }
+
+        .img {
+            height: 250px;
+            width: 250px;
+            position: relative;
+        }
+
+        .circle {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            background-color: burlywood;
+        }
+
+        .highlight {
+            background-color: bisque;
+            color: blue;
+        }
+
+        /* 23 */
+        .Bold {
+            color: blue;
+        }
+
+        #p24 {
+            border: 2px solid red;
+            height: 100px;
+            width: 150px;
+            text-align: center;
+        }
+
+        .target {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+
+        #circle2 {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+        .shape {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-duration: 4s;
+            animation-name: shape;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes shape {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: red;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: red;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: red;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* 25 */
+
+        .main {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            color: #1424fa;
+            border: 4px solid;
+            border-radius: 50px;
+            border-top-color: transparent;
+            animation: loader 1s linear infinite;
+        }
+
+        @keyframes loader {
+            25% {
+                color: #03d644;
+            }
+
+            50% {
+                color: #fbfe09;
+            }
+
+            75% {
+                color: #fc0303;
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 28 */
+        #box28 {
+            border: 2px solid black;
+            height: 210px;
+            width: 300px;
+            position: relative;
+            margin-left: 40px;
+        }
+        
+        #one1 {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            background-color: rgb(255, 2, 44);
+        }
+       
+        /* 29 */
+
+        #box29 {
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            margin-left: 40px;
+        }
+        
+        #Two {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: rgb(255, 0, 85);
+        }
+       
+        /* 30 */
+        #p32 {
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            border-radius: 800px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1 -->
+    <h2>
+        Question:-1
+    </h2>
+    <div>
+        <label for="">Enter your text : </label>
+        <input type="text" placeholder="Enter msg" id="i1">
+        <p></p>
+        <button id="btn">Double Click</button>
+    </div>
+    <hr class="hr">
+
+    <!-- 2 -->
+    <h2>
+        Question:-2
+    </h2>
+    Enter the message:<input type="text" id="i2">
+    <div id="d1"></div>
+    <hr class="hr">
+
+    <!-- 3 -->
+    <h2>
+        Question:-3
+        <span>
+            <p id="blink">Hello,I'm Fenil Bhakhar</p>
+        </span>
+        <hr class="hr">
+    </h2>
+
+    <!-- 4 -->
+    <h2>Question:-4</h2>
+    <div>
+        <h1>Fenil Bhakhar</h1>
+        <h2>Fenil Bhakhar</h2>
+        <h3>Fenil Bhakhar</h3>
+        <h4>Fenil Bhakhar</h4>
+        <h5>Fenil Bhakhar</h5>
+        <h6>Fenil Bhakhar</h6>
+        <button id="remove">Remove</button>
+    </div>
+    <hr class="hr">
+
+    <!-- 5 -->
+    <h2>Question:-5</h2>
+    <div><img src="fmobile.jpg" alt="" class="img"></div>
+    <hr class="hr">
+
+    <!-- 6 -->
+    <h2>Question:-6</h2>
+    <p class="circle"></p>
+    <button id="b1">Click Me</button>
+    <br>
+    <hr class="hr">
+
+    <!-- 7 -->
+    <h2>Question:-7</h2>
+    <div class="fade">
+        <img src="fmobile.jpg" height="250px" width="250px">
+    </div>
+    <hr class="hr">
+
+    <!-- 8 -->
+    <h2>Question:-8</h2>
+    <div>
+        <p class="ttt">This is Toggle between slid up and slide down.</p>
+    </div>
+    <div>
+        <button id="slideup">Slide Up</button>
+        <button id="slidedown">Slide Down</button>
+        <button id="toggle">Toggle</button>
+    </div>
+    <hr class="hr">
+
+    <!-- 9 -->
+    <h2>Question:-9</h2>
+    <p class="high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime eveniet dolore dolorum
+        distinctio perspiciatis! Assumenda ipsa minima exercitationem ex dicta nemo, enim aliquam cum numquam dolorem.
+        Repellendus, necessitatibus perspiciatis.</p>
+    <p class="high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime eveniet dolore dolorum
+        distinctio perspiciatis! Assumenda ipsa minima exercitationem ex dicta nemo, enim aliquam cum numquam dolorem.
+        Repellendus, necessitatibus perspiciatis.</p>
+    <p class="high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime eveniet dolore dolorum
+        distinctio perspiciatis! Assumenda ipsa minima exercitationem ex dicta nemo, enim aliquam cum numquam dolorem.
+        Repellendus, necessitatibus perspiciatis.</p>
+    <p class="high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime eveniet dolore dolorum
+        distinctio perspiciatis! Assumenda ipsa minima exercitationem ex dicta nemo, enim aliquam cum numquam dolorem.
+        Repellendus, necessitatibus perspiciatis.</p>
+    <p class="high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime eveniet dolore dolorum
+        distinctio perspiciatis! Assumenda ipsa minima exercitationem ex dicta nemo, enim aliquam cum numquam dolorem.
+        Repellendus, necessitatibus perspiciatis.</p>
+    <hr class="hr">
+
+    <!-- 10 -->
+    <h2>Question:-10</h2>
+    <p id="text10">Hello,I'm Fenil Bhakhar</p>
+    <button id="btnul">Click here</button>
+    <hr class="hr">
+
+    <!-- 11 -->
+    <h2>Question:-11</h2>
+    <input type="text" id="get">
+    <button type="button" id="btn">Show Value</button>
+    <hr class="hr">
+
+    <!-- 12 -->
+    <h2>Question:=12</h2>
+    <table id="table" border="2px black">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Fenil</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nirav</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Keval</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Yash</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="btnrow">Row Count</button>
+    <button id="btnclm">Column Count</button>
+    <hr class="hr">
+
+    <!-- 13 -->
+    <h2>Question:-13</h2>
+    <input type="text">
+    <hr class="hr">
+
+    <!-- 14 -->
+    <h2>Question:-14,15</h2>
+    <p class="qustion">Question :- 14 & 15</p>
+
+    <ul id="ul1">
+        <li>Surat</li>
+        <li>Junagadh</li>
+        <li>Amreli</li>
+        <li>Vapi</li>
+        <li>Valsad</li>
+
+    </ul><br>
+    <input type="text" id="myInput" placeholder="Add items here">
+    <button class="submitButton" type="button" id="p14">Add To List</button>
+    <hr class="hr">
+
+    <!-- 16 -->
+    <h2>Question :- 16</h2>
+      <hr>
+        <h2>Fruits</h2>
+        <p id="names"></p>
+        <hr class="hr">
+
+    <!-- 17 -->
+    <h2>Question:-17</h2>
+        <hr>
+        <ol start="5" id="p17" style="color:orange;">
+            <li>Surat</li>
+            <li>Junagadh</li>
+            <li>Amreli</li>
+            <li>Vapi</li>
+            <li>Valsad</li>
+        </ol>
+        <hr class="hr">
+
+    <!-- 18 -->
+    <h2>Question:-18</h2>
+    <hr>
+    <div class="shape"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr class="hr">
+
+    <!-- 19 -->
+    <h2>Question:-19</h2>
+    <hr>
+    <input type="text" placeholder="Add new item" id="p19">
+    <button id="btn19">ADD</button>
+    <br><br>
+
+    <div id="drpDown" style="margin-left: 70px;">
+        <select>
+
+            <option>C</option>
+            <option>CPP</option>
+            <option>C#</option>
+            <option>JavaScript</option>
+            <option id="next">Python</option>
+
+        </select>
+
+    </div>
+    <hr class="hr">
+
+    <!-- 20 -->
+    <h2>Question 20</h2>
+
+    <label>Maximum 15 Character</label>
+    <textarea id="textarea" maxlength="15"></textarea>
+    <span id="rchars">15</span>
+    <hr class="hr">
+
+    <!-- 21 -->
+    <h2>Question:-21</h2>
+
+        <hr>
+        <select id="p21">
+            <option value="#4bb64f">Green</option>
+            <option value="#E070D6">Fuchsia</option>
+            <option value="#808080">Gray</option>
+            <option value="#3366CC">Blue</option>
+            <option value="#ed9d2b">Orange</option>
+            <option value="#FF9CB3">Pink</option>
+            <option value="#EA4A4A">Red</option>
+        </select>
+        <h1 id="someDiv">Fenil Bhakhar</h1>
+        <hr class="hr">
+
+    <!-- 22 -->
+    <h2>Question:-22</h2>
+    <div id="target" style="overflow: scroll; width: 600px; height: 200px;font-size: 20px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="log"></div>
+    <hr class="hr">
+
+    <!-- 23 -->
+    <h2>Question:-23</h2>
+    <p class="class23"><b>Some text</b> some other text</p>
+    <hr class="hr">
+
+    <!-- 24 -->
+    <h2>Question:-24</h2>
+
+        <hr>
+        <div id="p24">Move the mouse</div>
+        <h1 id="move"></h1>
+        <hr class="hr">
+
+    <!-- 25 -->
+    <h2>Question:-25</h2>
+
+        <hr>
+        <br><br>
+        <div class="main">
+            <div class="loader">
+            </div>
+        </div>
+        <h2 style="margin-left: 70px;">Hello Friend Wel-come to My Page .....</h2><br><br><br>
+        <hr class="hr">
+
+    <!-- 26 -->
+    <h2>Question:-26</h2>
+
+    <hr>
+    <p>Click the button</p>
+    <button id="p26"> Bounce </button> <br><br>
+    <div class="target"></div>
+    <hr class="hr">
+
+    <!-- 27 -->
+    <h2>Question:-27</h2>
+    <hr class="hr">
+
+    <!-- 28 -->
+    <h2>Question:-28</h2>
+    <hr>
+    <input id="height28" type="text" placeholder="Enter height S">
+    <input id="width28" type="text" placeholder="Enter width "><br><br>
+    <button  id="button28">Setout</button><br><br><br><br>
+    <div id="box28">
+        <div id="one1"></div>
+    </div>
+    <hr class="hr">
+
+    <!-- 29 -->
+    <h2>Question:-29</h2>
+    <p class="qustion">Question :- 29</p>
+            <hr>
+            <input id="height29" type="text" placeholder="Enter height S">
+            <input id="width29" type="text" placeholder="Enter width "><br><br>
+            <button  id="button29">Setout</button><br><br><br><br>
+            <div id="box29">
+                <div id="Two"></div>
+            </div>
+            <hr class="hr">
+
+    <!-- 30 -->
+    <h2>Question:-30</h2>
+    <hr>
+    <div id="textarea30">
+        <input id="height30" type="text" placeholder="Enter the height of the shap">
+        <input id="width30" type="text" placeholder="Enter the width of the shap"><br><br><br>
+        <textarea style="margin-left: 70px;">
+        </textarea><span></span><br><br><br>
+        <button id="button30" >Set </button>
+    </div>
+    <hr class="hr">
+
+    <!-- 31 -->
+    <h2>Question:-31</h2>
+            <hr>
+            <div>
+                <button id="cirbtn2">Click</button>
+                <p id="circle2"></p>
+            </div>
+            <hr class="hr">
+
+    <!-- 32 -->
+    <h2>Question:-32</h2>
+    <hr>
+    <div id="p32"></div>
+    <br><br>
+    <button id="btn32">Click </button>
+    <hr class="hr">
+</body>
+
+<script>
+    $(document).ready(function () {
+        // 1
+        $("#btn").dblclick(function () {
+            $("p").html("hello " + $("#i1").val());
+        })
+
+        // 2
+        $("input").on("keydown", function (event) {
+            $("#d1").html("The value is : " + event.type + " : " + event.which);
+        })
+
+        // 3
+        function blink_text() {
+            $("#blink").fadeOut(500);
+            $("#blink").fadeIn(500);
+        } setInterval(blink_text, 1000);
+
+        // 4
+        $("#remove").click(function () {
+            $("h4").next().remove();
+            $("h5").next().remove();
+            $("h6").next().remove();
+        })
+
+        //5
+        $(".img").hover(function () {
+            $(".img").animate({
+                left: "1100"
+            }, 1500)
+        })
+
+        //6
+        $("#b1").click(function () {
+            $(".circle").height(400);
+            $(".circle").width(400);
+            $(".circle").off();
+        })
+
+        //7
+        $(".fade").hover(function () {
+            $(this).fadeIn(5000);
+        },
+            function () {
+                $(this).fadeOut(5000);
+            })
+
+        //8
+        $('#slideup').click(function () {
+            $(".ttt").slideUp(100);
+        })
+        $("#slidedown").click(function () {
+            $(".ttt").slideDown(100);
+        })
+        $("#toggle").click(function () {
+            $(".ttt").slideToggle(100);
+        })
+
+        //9
+        $(".high").mouseenter(function () {
+            $(this).next().addClass("highlight");
+        })
+        $(".high").mouseenter(function () {
+            $(this).removeClass("highlight");
+        })
+
+        //10
+        $("#btnul").click(function () {
+            $("#text10").css("text-decoration", "underline");
+        })
+
+        //11
+        $("#btn").click(function () {
+            var str = $("#get").val();
+            alert(str);
+        })
+        //12
+        $("#btnrow").click(function () {
+            var Count = $("#table tr").length;
+            alert(Count);
+        })
+        $("#btnclm").click(function () {
+            var Count = $("#table th").length;
+            alert(Count);
+        })
+
+        //13
+        $("input").keydown(function () {
+            $(this).css("background-color", "black");
+            $(this).css("color", "red");
+        })
+
+        //14 & 15
+        $("#p14").click(function () {
+            var list = $("#ul1").text();
+            var value = $("#myInput").val();
+            alert(list + "     " + value);
+        });
+
+        // 16
+        var fruitsArray = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+        $.each(fruitsArray, function (index, value) {
+            $("#names").append(index + ": " + value + '<br>');
+        });
+
+        // 17
+        function blink_text2() {
+            $("#p17").fadeOut(1000);
+            $("#p17").fadeIn(500);
+        }
+        setInterval(blink_text2, 1000);
+
+        // 18
+        $("body").keypress(function () {
+            $(".shape").css('position', 'static');
+        })
+
+        // 19
+        $("#btn19").click(function () {
+            var val = $("#p19").val();
+            $("#drpDown #next").last().text(val);
+        });
+
+        //20
+        var maxLength = 15;
+        $('textarea').keyup(function () {
+            var textlen = maxLength - $(this).val().length;
+            $('#rchars').text(textlen);
+        });
+
+        // 21
+        $("#p21").change(function () {
+            $("#someDiv").css("background-color", $(this).val());
+        }).change();
+
+        // 22
+        $( "#target" ).scroll(function() {
+        });
+       
+        //23
+        $('.class23').mouseenter(function () {
+            $(this).addClass("highlight");
+        });
+
+        $('.class23').mouseout(function () {
+            $(this).removeClass("highlight");
+        });
+
+        // 24
+        $("#p24").mousemove(function () {
+            $("#move").html("Hy I'M Fenil Bhakhar");
+        });
+
+        //25)
+
+        $(".main").fadeOut(2000);
+
+
+        //26)
+        $("#p26").click(function () {
+            $(".target").effect("bounce", { times: 5 }, 1000);
+        });
+
+
+        //27)
+
+
+        //28)
+        $("#button28").click(function() {
+                var hgt1 = $("#height28").val();
+                var wgt1 = $("#width28").val();
+                $("#box28").height(hgt1).width(wgt1);
+            });
+
+        //29)
+        $("#button29").click(function() {
+                var hgt = $("#height29").val();
+                var wgt = $("#width29").val();
+                $("#Two").height(hgt).width(wgt);
+            });
+
+
+        //30)
+        $("#button30").click(function() {
+                var hgt2 = $("#height30").val();
+                var wgt2 = $("#width30").val();
+                $("#textarea30 textarea").width(wgt2).height(hgt2);
+            });
+
+        //31)
+        $("#cirbtn2").click(function () {
+            $("#circle2").toggle(1000).height(300);
+            $("#circle2").toggle(1000).width(300);
+        });
+
+        $("#cirbtn2").click(function(){
+            $('#circle2').animate({
+                width : "300px",
+                height : "300px",
+            },1500);
+        })
+        $("#cirbtn2").click(function(){
+            $('#circle2').animate({
+                width : "100px",
+                height : "100px",
+            },1500);
+        })
+
+        //32)
+        $("#btn32").click(function() {
+                $("#p32").css('width', '300px')
+        });
+
+    })
+</script>
+
+
+</html>

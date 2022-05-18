@@ -1,0 +1,19 @@
+<!--
+The ng-show directive shows the 
+specified HTML element if the expression evaluates to true, 
+otherwise the HTML element is hidden.-->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+Show HTML: <input type="checkbox" ng-model="myVar">
+
+<div id="show" ng-show="myVar">
+<h1>Welcome</h1>
+<p>Welcome to my home.</p>
+</div>
+
+</body>
+</html>

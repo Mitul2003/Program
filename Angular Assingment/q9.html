@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app = "myapp" ng-controller = "mycon">
+        <p>Enter the number : 
+            <input type="number" ng-model = "in">
+        </p>
+        <p>
+            <button ng-click = "mTOc()">
+                Centimeter to Meter
+            </button>
+            <button ng-click = "cTOm()">
+                Meter to Centimeter
+            </button>
+        </p>
+        <h4>Answer is : {{res}}</h4>
+    </div>    
+
+    <script>
+        var app = angular.module("myapp", [])
+        .controller("mycon",function($scope) {
+            $scope.res = 0;
+            $scope.mTOc = function() {
+                $scope.res = $scope.in / 1000;
+            };
+            $scope.cTOm = function() {
+                $scope.res = $scope.in * 1000;
+            };
+        });
+    </script>
+</body>
+</html>

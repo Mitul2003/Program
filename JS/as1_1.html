@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="/JS/jquery_3.6.0.min.js"></script>
+    <style>
+        #containerScaled, #followC {
+    
+            transition: all 0.9s ease-out;
+            transform-origin: center;
+            transform: scale(1, 1);
+        }
+        .box {
+            height:50px;
+            width:50px;
+            left: 500px;
+            background-color: blueviolet;
+            position: absolute;
+        }
+        .mouseFollow {
+            position: fixed;
+            width:70px;
+            height:20px;
+            font-size:12px;
+            pointer-events:none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            // 111
+            $("#btn").dblclick(function () {
+                $("#msg").html("Hello " + $("#messej").val() + " !!!!");
+            });
+
+            // 2
+            $("input").on("keydown", function (event) {
+                $("#keybord1").html("the value of " + event.type + ":" + event.which);
+            })
+
+            //3
+            function blink_text(){
+                $('#blink').fadeOut(500);
+                $('#blink').fadeIn(500);
+            }setInterval(blink_text,1000)
+
+            //4
+            $("#rmv").click(function(){
+                $("h4").remove();
+                $("h5").remove();
+                $("h6").remove();
+            })
+
+            //5
+            $("#containerScaled").on('mousemove', '.box', function (e) {
+                $("#followC").css("top", e.clientY)
+                    .css("left", e.clientX);
+            });
+
+            //7
+            
+            $("#btn").click(function(){
+                $('#fade').fadeOut();
+            })
+
+            
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 1111 -->
+    <div id="contauner">
+        <p id="line"> <b>Qustion :- 1</b> </p>
+        <label>Enter Your Messages : </label>
+        <input id="messej" type="text" placeholder="Messages">
+        <p id = "msg">
+        </p>
+        <button id="btn">Double Click</button>
+    </div>
+
+    <!-- 222 -->
+    <br>
+    <p id="line"></p> <b> Qustion :- 2 </b>
+    <br>
+    <br>
+    <div>
+        <input type="text" id="keybord">
+        <div id="keybord1"></div>
+    </div>
+
+    <!-- 333 -->
+    <p id="line"> <b> Qustion :- 3 </b> </p>
+    <div>
+        <span>
+            <p id="blink">
+                We are from sun city of surat.
+            </p>
+        </span>
+    </div>
+
+    <!-- 444 -->
+    <p> <b> Qustion :- 4</b> </p>
+    <div>
+        <h1 id = "fourth">Mitul Dudhat</h1>
+        <h2 id = "fourth">Mitul Dudhat</h2>
+        <h3 id = "fourth">Mitul Dudhat</h3>
+        <h4 id = "fourth">Mitul Dudhat</h4>
+        <h5 id = "fourth">Mitul Dudhat</h5>
+        <h6 id = "fourth">Mitul Dudhat</h6>
+
+        <button id="rmv">Remove</button>
+    </div>
+
+    <!-- 555 -->
+    <hr>
+    <p><b> Qustion :- 5 </b></p>
+    <div id="containerScaled" class="container">
+        <div class="box">Mouse</div>
+    </div>
+    <div id="followC" class="mouseFollow"><img src="https://source.unsplash.com/user/erondu/200x200" alt="hello"/></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <!-- 777 -->
+    <hr>
+    <p class="qustion"><b> Qustion :- 7</b></p>
+    <div>
+        <img id="fade" src="https://source.unsplash.com/user/erondu/200x200" alt="Avengers">
+    </div>
+    <button id="btn">button</button>
+    <hr>
+    
+</body>
+
+</html>

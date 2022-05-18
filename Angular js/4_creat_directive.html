@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+
+<w3-test-directive></w3-test-directive>
+<div w3-test-directive></div>
+<!-- <div class="w3-test-directive"></div> -->
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        // restrict : "C",    create class directiv must be add 'C'
+        template : "<h1>Made by a directive!</h1>"
+    };
+    //By adding a restrict property with the value "A", the directive can only be invoked by attributes:
+    /*
+    E for Element name
+    A for Attribute
+    C for Class
+    M for Comment
+    By default the value is EA, meaning that both Element names and attribute names can invoke the directive.
+    */
+});
+</script>
+
+</body>
+</html>

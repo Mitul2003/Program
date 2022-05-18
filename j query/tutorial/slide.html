@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="/j query/jquery_3.6.0.min.js"></script>
+<style>
+    #penal
+    {
+        background-color: red;
+        padding: 100px;
+        text-align: center;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('div').click(function(){
+            // $('#penal').slideUp()
+            $(this).slideToggle(3000)
+        })
+        // $('button').click(function(){
+        //     $('#penal').stop();
+        // })
+
+        $('button').click(function(){
+            $('#penal').hide(3000,function(){
+                alert("this is callback function")
+            })
+           
+
+        })
+      
+    })
+</script>
+<body>
+    <button>stop sliding</button>
+    <div id="penal">
+        Hello world!!!
+    </div>
+
+    <button > slide</button>
+</body>
+</html>

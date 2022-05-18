@@ -1,0 +1,33 @@
+
+<!-- The ng-model-options directive is used to control the binding of an HTML 
+form element and a variable in the scope.
+
+You can specify that the binding should wait for a specific event to occur, 
+or wait a specific number of milliseconds, and more, 
+see the legal values listed in the parameter values below.-->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<p>Update the input field:</p>
+<input ng-model="name" ng-model-options="{update : 'focus'}">  <!--blur-->
+
+<p>The value will wait with the binding until the field loses focus:</p>
+
+{{name}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "xyz";
+});
+</script>
+</body>
+</html>
+

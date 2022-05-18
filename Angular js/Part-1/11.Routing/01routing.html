@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<body ng-app="myApp">
+
+<p><a href="#/!">Main</a></p>
+
+<a href="#!page1">page 1</a>
+<a href="#!page2">page 2</a>
+
+<p>Click on the links to change the content.</p>
+
+<p>The HTML shown in the ng-view directive are written in the template property of the $routeProvider.when method.</p>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        template : "<h1>Main</h1><p>Click on the links to change this content</p>"
+    })
+    .when("/page1", {
+        template : "<h1>page 1</h1><p>This is page 1</p>"
+    })
+    .when("/page2", {
+        template : "<h1>page 2</h1><p>This is page 2.</p>"
+    });
+});
+</script>
+
+</body>
+</html>

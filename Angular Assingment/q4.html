@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script>
+        var myapp = angular.module("mymodule", [])
+            .controller("mycon", function ($scope) {
+                var stu = [
+                    { Rollno: 1, Name: 'Jinansh', Year: 'SY', CSA: 85, WT: 90, C: 85 },
+                    { Rollno: 2, Name: 'Jaydeep', Year: 'SY', CSA: 70, WT: 95, C: 80 },
+                    { Rollno: 3, Name: 'Harshil', Year: 'SY', CSA: 88, WT: 92, C: 91 },
+                    { Rollno: 4, Name: 'Khushi', Year: 'SY', CSA: 95, WT: 93, C: 92 },
+                    { Rollno: 5, Name: 'Sejal', Year: 'SY', CSA: 75, WT: 80, C: 82 }
+                ]
+                $scope.stu = stu;
+            });
+    </script>
+</head>
+
+<body ng-app="mymodule" ng-controller="mycon">
+    <table border ="">
+        <th>RollNo</th>
+        <th ng-hide = "myVar">Name</th>
+        <th>Year</th>
+        <th>CSA</th>
+        <th>WI-II</th>
+        <th>C++</th>
+        <th>Total</th>
+        <th>Average</th>
+
+        <tr ng-repeat="students in stu">
+            <td>{{students.Rollno}}</td>
+            <td ng-hide = "myVar">{{students.Name}}</td>
+            <td>{{students.Year}}</td>
+            <td>{{students.CSA}}</td>
+            <td>{{students.WT}}</td>
+            <td>{{students.C}}</td>
+            <td>{{students.CSA+student.WT+students.C}}</td>
+            <td>{{students.CSA+student.WT+students.C/3}}</td>
+        </tr>
+    </table>
+    Student Name : <input type="checkbox" ng-model="myVar">
+</body>
+
+</html>

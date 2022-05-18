@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        .imgme {
+            height: 350px;
+            width: 250px;
+        }
+
+        .qustion {
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        #circle {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--111-->
+    <div>
+        <p class="qustion">Qustion :- 1</p>
+        <label for="">Enter yor Message</label>
+        <input type="text" placeholder="Enter Message" name="" id="i1">
+        <p id="fmsg"></p>
+        <button id="btn">Double Click</button>
+        <hr>
+
+        <!-- 222 -->
+        <p class="qustion">Qustion :- 2</p>
+        Input type : <input type="text" id="keybord">
+        <div id="keybord1"></div>
+    </div>
+    <hr>
+
+    <!-- 333 -->
+    <p class="qustion">Qustion :- 3</p>
+    <span>
+        <p id="blink">We are from SURAT - A City of Sun...</p>
+    </span>
+
+    <hr>
+    <!-- 444 -->
+    <p class="qustion">Qustion :- 4</p>
+
+    <div id="fourth">
+        <h1>Keval savaliya</h1>
+        <h2>Keval savaliya</h2>
+        <h3>Keval savaliya</h3>
+        <h4>Keval savaliya</h4>
+        <h5>Keval savaliya</h5>
+        <h6>Keval savaliya</h6>
+        <button id="rmv">Remove</button>
+    </div>
+
+    <hr>
+
+    <!-- 555  baki-->
+    <p class="qustion">Qustion :- 5</p>
+    <div>
+        <img src="gg.jpg" alt="" class="imgme">
+    </div>
+    <hr>
+    <!-- 666 baki -->
+    <p class="qustion">Qustion :- 6</p>
+
+    <div>
+        <div><button id="btn">Click</button></div>    
+        <p id="circle"></p> 
+    </div>
+
+    <hr>
+    <!-- 777 -->
+    <p class="qustion">Qustion :- 7</p>
+    <div class="fade">
+        <img src="gg.jpg" alt="Avengers">
+    </div>
+    <hr>
+
+    <!--888-->
+    <p class="qustion">Qustion :- 8</p>
+    <div id="slide">
+        Program 8
+    </div>
+    <div class="btncont" style="margin: top 20%;">
+        <button id="hideit">Slide Up</button>
+        <button id="showit">Slide Down</button>
+        <button id="toggle">Slide toggle</button>
+    </div>
+    <hr>
+
+    <!--999-->
+    <!--12-->
+    <p class="qustion">Qustion :- 12</p>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>
+                    Instructor
+                </th>
+                <th>Number</th>
+                <th>Class</th>
+                <th>Div</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Keval</td>
+                <td>2062</td>
+                <td>JQuery</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Rose</td>
+                <td>0808</td>
+                <td>CSS</td>
+                <td>C</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="row">Count no of Rows</button>
+    <button id="column">Count no of Columns</button>
+
+
+</body>
+<script>
+    //1
+    $(document).ready(function () {
+        $("#btn").dblclick(function () {
+            $("#fmsg").html("Hello " + $("#i1").val());
+        })
+    });
+
+    //2
+    $("input").on("keydown", function (event) {
+        $("#keybord1").html("The value is : " + event.type + ": " + event.which);
+    });
+
+    //3
+     function blink_text() {
+            $('#blink').fadeOut(500);
+            $('#blink').fadeIn(500);
+        } setInterval(blink_text, 1000);
+
+    //4
+      $("#rmv").click(function () {
+            
+            $("h5").remove();
+        })
+
+    //5
+    $("#image").hover(function () {
+            $(this).find('img').animate({
+                right: '50px'
+            }, 500);
+        }, function () {
+            $(this).find('img').animate({
+                right: '0px'
+            }, 500);
+        })
+
+     //6
+     $('#btn').click(function(){
+            $('#circle').css("height", "300px");
+            $('#circle').css("Width", "300px");
+        });
+
+        //7
+    $(document).ready(function()
+    {
+        $(".fade").css('opacity',0.4);
+        $(".fade").hover(
+            function(){
+                $(this).find('img').stop().fadeTo('slow',1);
+            },
+             
+            function(){
+                $(this).find('img').stop().fadeTo('slow',0.2);
+            }
+        )
+    })
+
+    //8
+    $(document).ready(function()
+    {
+        $('#hideit').click(function()
+        {
+            $('#slide').slideUp(1000);
+        })
+        $('#showit').click(function()
+        {
+            $('#slide').slideDown(1000);
+        })
+        $('#toggle').click(function()
+        {
+            $('#slide').slideToggle(1000);
+        })
+
+    })
+
+    //12
+    $(document).ready(function()
+    {
+        $("#row").click(function(){
+            var count = $("#table tr").length;
+            alert(count);
+        })
+        $("#column").click(function(){
+            var count = $("#table th").length;
+            alert(count);
+        })
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div>  <!--without ng-app expression print as it is eithout processing/ -->
+<p>{{ 'Hello' + 'World' }}</p>
+<p>{{ 1 == 1 }}</p>
+ <p>{{ { name: 'xyz', age : '30' }.age }} </p>
+ <p>{{ ['xyz', 'abc', 'pqr'][2] }}  </p>
+								<!--
+                                    {{ 1 == 1 }} 
+                                    {{ { name: 'xyz', age : '30' }.name }} 
+                                    {{ ['xyz', 'abc', 'pqr'][2] }} 
+                                -->
+</div>
+<div>
+	<p> {{'Hello' + 'World'}}</p>
+	<p>{{ 1 == 1 }}</p>
+	<p>{{ { name: 'xyz', age : '30' }.age }} </p>
+	<p>{{ ['xyz', 'abc', 'pqr'][0] }}  </p>
+</div>
+
+</body>
+</html>

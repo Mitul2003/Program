@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+
+<body ng-app ="myModule" >
+    <div  ng-controller="myController">  <!--without ng-app expression print as it is eithout processing/ -->
+        div 1
+		{{ message }}   <!--veiw-->
+    </div>
+    <div>
+		div 2
+        {{ message }}
+    </div>
+
+</body>
+</html>

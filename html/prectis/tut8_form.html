@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h2>This is form tut.</h2>
+    <center>
+    <form action="backend.php"  style="background-color: red; width: 500px;border: black 2px;">
+
+        <div>
+            <label for="name">Name : </label>
+            <input type="text" name="myname" id="name">
+        </div>
+        <br>
+        <div>
+            Role : <input type="text" name="myRoal">
+        </div>
+        <br>
+        <div>
+            Email : <input type="email" name="myEmail" id="">
+        </div>
+        <br>
+        <div>
+            Date :<input type="date" name="mydate" id="">
+        </div>
+        <br>
+        <div>
+            number : <input type="number" name="mynumber" id="">
+        </div>
+        <br>
+        <div>
+            Are you eligible: <input type="checkbox" name="eligible" checked id="">
+
+        </div>
+        <br>
+        <div>
+            Gender : Male<input type="radio" name="mygender" id=""> Female<input type="radio" name="mygender">
+            other<input type="radio" name="mygender">
+        </div>
+        <br>
+        <div>
+            Write about your self : <br><textarea name="mytext" id="" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="car">car</label>
+            <select name="mycar" id="car">
+                <option value="volvo">volvo</option>
+                <option value="swift" selected>swift</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Reset now">
+            <input type="submit" value="submit now">
+        </div>
+    </form>
+</center>
+</body>
+
+</html>

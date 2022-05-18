@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div ng-app="myapp" ng-controller="myctr">
+        First num : <input type="number" ng-model="num1"> <br>
+        Last num : <input type="number" ng-model="num2"> <br>
+
+        <br>
+        <select ng-model="op">
+            <option value="+">+</option>
+            <option value="+">-</option>
+            <option value="+">*</option>
+        </select>
+
+        <p>
+            {{ ans() }}
+            <br>
+            <button ng-click="sum()">+</button>
+        </p>
+
+    </div>
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myctr", ($scope) => {
+            $scope.ans = () => {
+                if ($scope.op == "+") {
+                    return $scope.num1 + $scope.num2;
+                }
+            }
+            // $scope.sum = () => {
+            //     $scope.ans = () => {
+            //     return $scope.num1 + $scope.num2;
+            // }
+            //}
+
+        })
+    </script>
+</body>
+
+</html>
