@@ -1,3 +1,6 @@
+// find the pivot in the array
+// arr = [ sorted,pivot : sorted]
+// arr = [3,4,5,6,7,0,1,2]
 #include <iostream>
 using namespace std;
 int shorted(int arr[], int n)
@@ -9,28 +12,28 @@ int shorted(int arr[], int n)
         int mid = (end + start) / 2;
         int next = (mid + 1) % n;
         int pre = (mid + n - 1) % n;
-        if (arr[mid] <= arr[next] && arr[mid] <= arr[pre])
-            return mid; // case 2
-        else if (arr[mid] <= arr[end])
-            end = mid - 1;
-        else if (arr[mid] >= arr[start])
+        
+        if(arr[mid] > arr[next])
+            return mid + 1;
+        if(arr[mid] < arr[pre])
+            return mid;
+        if(arr[mid] < arr[start])
+            end = mid-1;
+        else
             start = mid + 1;
-    }
-}
+    }    
+    return -1;
+}  
 
 int main()
 {
-    int arr[15], n, First, last;
+    int arr[] = {3,4,5,6,7,0,1,2}, n = 8;
     int ele, result;
-    cout << "Enter your size of aree :";
-    cin >> n;
-    int end = n - 1;
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Enter your Aree : ";
-        cin >> arr[i];
-    }
-
-    cout << "The arre is rotated  " << shorted(arr, n) << " Time.";
+   
+    int ans = shorted(arr, n);
+    if(ans == -1)
+        cout << "Array is not rotted";
+    else
+        cout << "The arre is rotated  " << ans << " Time.";
     return 0;
 }

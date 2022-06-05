@@ -3,6 +3,7 @@ using namespace std;
 
 int main(){
     // Polymorphism
+    //  many ways to represent
     //  - one name and multiple forms
     //  - eg. Function overloading, operator overloading
     //  - eg. Virtual Functions
